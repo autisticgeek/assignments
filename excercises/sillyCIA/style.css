@@ -1,0 +1,41 @@
+body{
+  margin: 0;
+}
+
+.container{
+  width:960px;
+  margin: auto;
+}
+
+#headline {
+  font-family: Georgia;
+  text-align: center;
+}
+
+#headline h1 {
+  color: darkgreen;
+}
+
+p {
+  line-height: 25px;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+.also{
+  text-transform: uppercase;
+}
+
+.fLeft{
+  float: left;
+  margin-right: 1rem;
+}
+ul {
+  list-style-position: inside;
+}
