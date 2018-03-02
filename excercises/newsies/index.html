@@ -10,27 +10,106 @@
 </head>
 
 <body>
-    <nav class="container">
-        <ul>
-            <li>Nav1</li>
-            <li>Nav2</li>
-            <li>Nav3</li>
-            <li>Nav4</li>
-            <li>Nav5</li>
-        </ul>
+    <nav>
+        <div class="container">
+            <ul>
+                <li>Nav1</li>
+                <li>Nav2</li>
+                <li>Nav3</li>
+                <li>Nav4</li>
+                <li>Nav5</li>
+            </ul>
+        </div>
     </nav>
+    <header class="container center">
+        <h1>Newsies</h1>
+        <h4>Annoying Little Newspaper</h4>
+        <div class="row top-bottom-border">
+            <div class="col-6 left">Hi there</div>
+            <div class="col-6 right">March 1, 2018</div>
+        </div>
+    </header>
     <div class="container">
-        <header>
-            <h1>Newsies</h1>
-        </header>
-<div class="row">
-    <div class="leftPanel"></div>
-    <aside>Side</aside>
-</div>
-        <footer>
-            &copy; 2018 Newsies
-        </footer>
+        <div class="row">
+            <main class="col-7">
+                <article>
+                    <h2>Bug in HP Remote Management Tool leaves servers open to attack.</h2>
+                    <h4>by Tom Spring</h4>
+                    <p>Hewlett Packard Enterprise has patched a vulnerability in its remote management hardware called Integrated
+                        Lights-Out 3 that is used in its popular line of HP ProLiant servers. The bug allows an attacker
+                        to launch an unauthenticated remote denial of service attack that could contribute to a crippling
+                        on vulnerable datacenters under some conditions.</p>
+                    <p>The vulnerability (CVE-2017-8987) is rated “high severity”, with a CVSS base score of 8.6, and was discovered
+                        by Rapid7 researchers in September. HPE publicly reported the bug on Feb. 22 and has made patches
+                        available.
+                    </p>
+                    <p>Affected is the v1.88 firmware for HPE’s Integrated Lights-Out 3 (iLO3). Not impacted are newer versions
+                        of the firmware (1.8, 1.82, 1.85, and 1.87) along with firmware for iLO4 (v2.55). iLO5 devices were
+                        not tested, according to a Rapid7 technical brief on the vulnerability written by Sam Huckins, the
+                        company’s program manager.</p>
+                </article>
+                <article>
+                    <h2>Sophisticated RedDrop Malware Targets Android Phones</h2>
+                    <h4>by Lindsey O'Donnell</h4>
+                    <p>A sophisticated strain of mobile malware targeting Android devices can extract sensitive data and audio
+                        recordings, run up premium SMS charges and then tries to extort money from victims.</p>
+                    <p>According to security firm Wandera the malware, dubbed RedDrop, is being distributed inside 53 Android
+                        applications promoted on third-party app stores. Apps range from image editors, calculators, language
+                        learning tools and adult themed apps. According to Wandera, the criminals had targeted victims working
+                        at several“Big Four” consultancy firms.</p>
+                    <p>“RedDrop is one of the most sophisticated pieces of Android malware that we have seen in broad distribution,”
+                        said Wandera in an overview of its research published Wednesday. “Not only does the attacker utilize
+                        a wide range of functioning malicious applications to entice the victim, they’ve also perfected every
+                        tiny detail to ensure their actions are difficult to trace.”</p>
+                </article>
+                <article>
+                    <h2>Ad network circumvents ad-blocking tools to run in-browser cryptojacker scripts</h2>
+                    <h4>by Lindsey O'Donnell</h4>
+                    <p>Cryptojackers are getting resourceful and have figured out how to bypass ad-blocking software and deliver
+                        the Coinhive JavaScript miner via browser-based ads. Researchers at Qihoo’s Netlab 360 said it recently
+                        spotted an advertising network that was using what is called a domain generation algorithm tool to
+                        evade ad-blocking tools and serve up ads that link to landing pages that contain the cryptominer
+                        Coinhive.
+                    </p>
+                    <p>Researchers are not identifying the ad network, but they said that since 2017 the provider has used domain
+                        generation algorithms (DGA) to effectively circumvent ad blockers. </p>
+                    <p>“Starting from 2017-12, the bar got raised again and we began to see these DGA.popad domains participating
+                        in cryptojacking without end-users acknowledgement,” Zhang Zaifeng, researcher with Netlab 360, wrote
+                        in a post.</p>
+                </article>
+            </main>
+            <aside class="col-5">
+                <section>
+                    <h4 class="center">Classifieds</h4>
+                    <div class="row">
+                        <div class="col-6 classAd">
+                            <strong>Moving Sale Fri. 10am</strong>
+                            <p>3370 Berwyck St. 89121 Whole house must go! Great Prices! Don't Miss this one!
+                        </div>
+                        <div class="col-6 classAd">
+                            <strong>ANNUAL BLOCK SALE</strong>
+                            <p>Balsa St Near Horizon Dr/Skyline, 89002 Saturday March 3rd. 8am to ? Stroll the Entire Street for a Huge Variety of Items!</p>
+                        </div>
+                        <div class="col-6 classAd">
+                            <strong>Why RENT? OWN your Office!</strong>
+                            <p>"THE SQUARE" Office-Condos, 100% Move-In ready TODAY! 1,382-2,568 SF, Hi-Speed Internet CAT6, Covered-Open Parking; SW AREA Just Built-Selling Fast: 702-339-4506</p>
+                        </div>
+                        <div class="col-6 classAd">
+                            <strong>This is your Opprinunity</strong>
+                            <p>Make a fourtne selling snake oil. Your customers won't feal a thing!</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
 
+                </section>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            &copy; 2018 Newsies
+        </div>
+    </footer>
     </div>
 </body>
 

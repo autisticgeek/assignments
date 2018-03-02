@@ -30,7 +30,6 @@ var peopleWhoWantToSeeMadMaxFuryRoad = [{
     age: 4,
     gender: "female"
 }]
-console.log(peopleWhoWantToSeeMadMaxFuryRoad.length);
 for (var i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++) {
     if (peopleWhoWantToSeeMadMaxFuryRoad[i].age > 17) {
         if (peopleWhoWantToSeeMadMaxFuryRoad.gender === "male") {
@@ -46,4 +45,17 @@ for (var i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++) {
         }
     }
 
+
+
 }
+
+
+//bonus
+var light = false;
+var sourceArray = [2, 5, 435, 4, 4]
+for (var h = 0; h < sourceArray.length; h++) {
+    for (i = sourceArray[h]; i > 0; i--) {
+        light === false ? light = true : light = false;
+    }
+}
+light === false ? console.log("Light is off") : console.log("Light is on");
