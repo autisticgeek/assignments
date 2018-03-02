@@ -69,6 +69,7 @@ if ((typeof red) === "undefined") {
     console.log(typeof red);
 
 }
+
 var letter= "t";
 var num = 12;
 if (letter > num) {
@@ -77,6 +78,5 @@ if (letter > num) {
     console.log(letter +" is less than "+ num);
 }
 
-
-myNum = 78;
-Number.isInteger(myNum / 2) ? console.log(myNum +" is even") : console.log(myNum +" is odd");
+var myNum = 78;
+myNum %2 === 0 ? console.log(myNum +" is even") : console.log(myNum +" is odd");
