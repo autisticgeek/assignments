@@ -30,6 +30,14 @@ html {
     margin-top: 0;
     margin-bottom: 0.5rem;
   }
+  article{
+    column-count: 3;
+    text-align: justify;
+  }
+  aside article{
+    column-count: 1;
+    text-align: justify;
+  }
   p {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -70,6 +78,11 @@ pre, code {
   @media (min-width: 1200px) {
     .container {
       max-width: 1140px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .container {
+      max-width: 1700px;
     }
   }
   .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,{
@@ -172,6 +185,9 @@ nav ul {
 nav, footer {
     background-color:darkslateblue;
     color: whitesmoke;
+}
+footer {
+  margin-top:5rem:
 }
 
 nav ul li {

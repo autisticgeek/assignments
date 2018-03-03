@@ -31,10 +31,11 @@
     </header>
     <div class="container">
         <div class="row">
-            <main class="col-7">
+            <main class="col-8">
+                <h2>Bug in HP Remote Management Tool leaves servers open to attack.</h2>
+                <h4>by Tom Spring</h4>
                 <article>
-                    <h2>Bug in HP Remote Management Tool leaves servers open to attack.</h2>
-                    <h4>by Tom Spring</h4>
+
                     <p>Hewlett Packard Enterprise has patched a vulnerability in its remote management hardware called Integrated
                         Lights-Out 3 that is used in its popular line of HP ProLiant servers. The bug allows an attacker
                         to launch an unauthenticated remote denial of service attack that could contribute to a crippling
@@ -47,10 +48,34 @@
                         of the firmware (1.8, 1.82, 1.85, and 1.87) along with firmware for iLO4 (v2.55). iLO5 devices were
                         not tested, according to a Rapid7 technical brief on the vulnerability written by Sam Huckins, the
                         company’s program manager.</p>
+                    <p>The Hewlett-Packard iLO is an embedded server management technology for ProLiant servers that consists
+                        of a physical card with a separate network connection. It allows system administrators to remotely
+                        manage servers.</p>
+                    <p>“An attacker who has already compromised a network can now can easily lock out an admin from fixing or
+                        mitigating against an attack,” said Tod Beardsley, Rapid7’s research director. “An attacker can use
+                        this to make a data center go dark and keep it that way by locking out remote management and mitigation.”
+                        Alternatively, system administrators will have to tackle on-premises fixes.</p>
+                    <p>According to Beardsley, an attacker sharing the same network as a vulnerable iLO3 can simply send several
+                        HTTP requests and cause the iLO3 device (running firmware v1.88) to stop responding for up to 10
+                        minutes.</p>
+                    <p>One of those examples includes using a Secure Socket Shell where an “open sessions will become unresponsive;
+                        new SSH sessions will not be established.” In another scenario with a web portal “users cannot log
+                        into the web portal; the login page will not successfully load,” according to Rapid7.</p>
+                    <p>Where as HTTP GET and POST requests are benign, curl -X OPTIONS request to an iLO3 device can trigger
+                        the DoS condition. “Any method requested other than GET or POST will trigger the DoS, even invalid
+                        ones,” Beardsley wrote. “Ten minutes after the DoS is triggered, the watchdog (automatic system recovery)
+                        service restarts the device.”</p>
+                    <p>“An attack doesn’t require authentication. The device itself requires some kind of authentication, such
+                        as a web portal that you use to like login. But this attack comes in before that. The attack is literally
+                        just an HTTP command,” Beardsley said.</p>
+                    <p>According to Rapid7, HP’s Integrated Lights-Out is not on by default, which likely disqualifies many
+                        ProLiant from the vulnerability</p>
                 </article>
+                <hr />
+                <h2>Sophisticated RedDrop Malware Targets Android Phones</h2>
+                <h4>by Lindsey O'Donnell</h4>
                 <article>
-                    <h2>Sophisticated RedDrop Malware Targets Android Phones</h2>
-                    <h4>by Lindsey O'Donnell</h4>
+
                     <p>A sophisticated strain of mobile malware targeting Android devices can extract sensitive data and audio
                         recordings, run up premium SMS charges and then tries to extort money from victims.</p>
                     <p>According to security firm Wandera the malware, dubbed RedDrop, is being distributed inside 53 Android
@@ -61,10 +86,30 @@
                         said Wandera in an overview of its research published Wednesday. “Not only does the attacker utilize
                         a wide range of functioning malicious applications to entice the victim, they’ve also perfected every
                         tiny detail to ensure their actions are difficult to trace.”</p>
+                    <p>Wandera told Threatpost it’s unsure how many Android devices may be infected with the malware. “One thing
+                        we have noticed is that the pace of attempted infections appears to be accelerating,” Wandera said.
+                        Since the company initially identified the malware, the company has blocked roughly 20 further requests
+                        by infected apps to reach the criminal’s distribution network – where additional malware would be
+                        downloaded from.</p>
+                    <p>The apps are being promoted via ads displayed on the popular Chinese search engine Baidu. Researchers
+                        said those who click on the ads are “taken to huxiawang[.]cn, the primary distribution site for the
+                        attack. The landing pages that follow host various content to encourage and incite the user to download
+                        one of the 53 apps within the RedDrop family of malicious apps.”</p>
+                    <p>Once the RedDrop-infected apps are installed the program silently downloads an additional seven Android
+                        application packages (APK) that add additional spyware and malicious components such as trojans,
+                        premium SMS functionality and additional dropper software.</p>
+                    <p>“When the user interacts with the app, each interaction secretly triggers the sending of an SMS to a
+                        premium service, which is then instantly deleted before it can be detected,” the company said.</p>
+                    <p>The rogue apps are capable of harvesting sensitive data, including passively recording audio of the device’s
+                        surroundings, accessing photos, contacts, and extracting locally saved files.</p>
+                    <p>Data siphoned off phones are uploaded to the attacker’s Dropbox account to be used in conjunction with
+                        further attacks and for possible extortion purposes.</p>
                 </article>
+                <hr />
+                <h2>Ad network circumvents ad-blocking tools to run in-browser cryptojacker scripts</h2>
+                <h4>by Lindsey O'Donnell</h4>
                 <article>
-                    <h2>Ad network circumvents ad-blocking tools to run in-browser cryptojacker scripts</h2>
-                    <h4>by Lindsey O'Donnell</h4>
+
                     <p>Cryptojackers are getting resourceful and have figured out how to bypass ad-blocking software and deliver
                         the Coinhive JavaScript miner via browser-based ads. Researchers at Qihoo’s Netlab 360 said it recently
                         spotted an advertising network that was using what is called a domain generation algorithm tool to
@@ -78,7 +123,20 @@
                         in a post.</p>
                 </article>
             </main>
-            <aside class="col-5">
+            <aside class="col-4">
+                <section>
+                    <h2>Inmate seriously injured in jail fight</h2>
+                    <h4>By Donna Thornton</h4>
+                    <article>
+                        <p>An Etowah County inmate is charged with attempted murder after he seriously injured a cellmate in a fight Tuesday night, according to Etowah County Sheriff Todd Entrekin.</p>
+                        <p>Joshua McDonald, 25, had been booked into the Etowah County Detention Center Nov. 29, 2017, for a probation violation.</p>
+                        <p>The inmate beaten during the fight Tuesday night was jailed for an unpaid traffic violation, according to Assistant Chief of Corrections Keith Peek and Lt. Brad Conaway.</p>
+                        <p>The 25-year-old man remains hospitalized.</p>
+                        <p>Entrekin said because of the seriousness of the victim’s injuries, the Cherokee County Sheriff’s Office was called in to investigate. He said Cherokee County investigators obtained the warrant for attempted murder Thursday.</p>
+                        <p>Entrekin said there were three men in the locked cell when the fight occurred. The third man was not involved in the altercation.</p>
+                        <p>While Entrekin said he didn’t know all the details of Cherokee County’s investigation, he understands the fight was over a prior drug debt.</p>
+                    </article>
+                </section>
                 <section>
                     <h4 class="center">Classifieds</h4>
                     <div class="row">
@@ -88,15 +146,18 @@
                         </div>
                         <div class="col-6 classAd">
                             <strong>ANNUAL BLOCK SALE</strong>
-                            <p>Balsa St Near Horizon Dr/Skyline, 89002 Saturday March 3rd. 8am to ? Stroll the Entire Street for a Huge Variety of Items!</p>
+                            <p>Balsa St Near Horizon Dr/Skyline, 89002 Saturday March 3rd. 8am to ? Stroll the Entire Street
+                                for a Huge Variety of Items!</p>
                         </div>
                         <div class="col-6 classAd">
                             <strong>Why RENT? OWN your Office!</strong>
-                            <p>"THE SQUARE" Office-Condos, 100% Move-In ready TODAY! 1,382-2,568 SF, Hi-Speed Internet CAT6, Covered-Open Parking; SW AREA Just Built-Selling Fast: 702-339-4506</p>
+                            <p>"THE SQUARE" Office-Condos, 100% Move-In ready TODAY! 1,382-2,568 SF, Hi-Speed Internet CAT6,
+                                Covered-Open Parking; SW AREA Just Built-Selling Fast: 702-339-4506</p>
                         </div>
                         <div class="col-6 classAd">
-                            <strong>This is your Opprinunity</strong>
-                            <p>Make a fourtne selling snake oil. Your customers won't feal a thing!</p>
+                            <strong>0 NW Buffalo and Lake Mead</strong>
+                            <p>$220,000 3 Bd Ba 2 car RV parking and covered patio Down Payment Assistance Avail CHAD ASF Realty
+                                & INV Inc 702-325-5513 Others Availabl</p>
                         </div>
                     </div>
                 </section>
