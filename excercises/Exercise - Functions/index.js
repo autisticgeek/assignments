@@ -65,16 +65,4 @@ console.log(fibonacci(9))
 // }
 // quad(6, 11, -35);
 
-// var characterCount = function(str,char) {
-//     var re = new RegExp(char,"gi");
-//     return str.match(re).length;
-//    }
-// var characterarray(str){
-//     var str2=str.split('');
-//     var mostCounted= {};
-//     for(var i;i<str2.length;i++){
-//         if()
-//     }
-// }
-
-// console.log(characterarray('I will practice survival skills');
+// cc
