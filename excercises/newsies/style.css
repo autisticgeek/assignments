@@ -47,8 +47,8 @@ html {
   margin-bottom: 1rem;
 }
 pre, code {
-  font-family: monospace,
-  font-size: 1em;
+  font-family: monospace;
+  font-size: 1rem;
 }
 .container {
     width: 100%;
@@ -187,7 +187,9 @@ nav, footer {
     color: whitesmoke;
 }
 footer {
-  margin-top:5rem:
+  margin-top:5rem;
+  padding-top:3rem;
+  padding-bottom:1rem;
 }
 
 nav ul li {
@@ -226,4 +228,23 @@ header h4{
 .top-bottom-border{
     border-top: darkblue solid thin;
     border-bottom: darkblue solid thin;
+}
+.fLeft{
+  float: left;
+  margin-right:10px
+}
+.img-flex{
+  width: 50%
+}
+strong{
+  font-weight: bold;
+}
+i{
+  font-style: italic;
+}
+u{
+  text-decoration: underline;
+}
+highlight {
+  background-color: #e2f34d;
 }

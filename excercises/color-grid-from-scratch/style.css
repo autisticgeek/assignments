@@ -28,14 +28,14 @@ div {
     background-color: #E76E34
 }
 .all{
-    width:1880px;
+    width:100%;
 }
 .threeFourths{
-    width:1410px;
+    width:75%;
 }
 .oneHalf{
-    width:940px;}
+    width:50%;}
 .oneQuarter{
-    width:470px;
+    width:25%;
 
 }

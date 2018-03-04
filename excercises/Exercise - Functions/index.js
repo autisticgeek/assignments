@@ -55,12 +55,26 @@ var fibonacci = function (n) {
 console.log(fibonacci(9))
 
 
-// Write a function to solve the quadratic equation. (It should accept three numbers as parameters, and then return an array with the resulting x values.)
+// // Write a function to solve the quadratic equation. (It should accept three numbers as parameters, and then return an array with the resulting x values.)
 
-var quad = function (a, b, c) {
-    var xPlus = (+(Math.sqrt((4 * a * c) - (b * b))) / (2 * a));
-    var xMin = (-(Math.sqrt((4 * a * c) - (b * b))) / (2 * a));
-    var xArr = [xMin, xPlus];
-    console.log(xArr);
-}
-quad(6, 11, -35);
+// var quad = function (a, b, c) {
+//     var xPlus = (+(Math.sqrt((4 * a * c) - (b * b))) / (2 * a));
+//     var xMin = (-(Math.sqrt((4 * a * c) - (b * b))) / (2 * a));
+//     var xArr = [xMin, xPlus];
+//     console.log(xArr);
+// }
+// quad(6, 11, -35);
+
+// var characterCount = function(str,char) {
+//     var re = new RegExp(char,"gi");
+//     return str.match(re).length;
+//    }
+// var characterarray(str){
+//     var str2=str.split('');
+//     var mostCounted= {};
+//     for(var i;i<str2.length;i++){
+//         if()
+//     }
+// }
+
+// console.log(characterarray('I will practice survival skills');

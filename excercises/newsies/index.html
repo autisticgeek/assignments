@@ -35,17 +35,17 @@
                 <h2>Bug in HP Remote Management Tool leaves servers open to attack.</h2>
                 <h4>by Tom Spring</h4>
                 <article>
-
+                    <img class="fLeft img-flex" src="https://trtpost-wpengine.netdna-ssl.com/files/2018/03/servers_generic-182x142.jpg">
                     <p>Hewlett Packard Enterprise has patched a vulnerability in its remote management hardware called Integrated
                         Lights-Out 3 that is used in its popular line of HP ProLiant servers. The bug allows an attacker
                         to launch an unauthenticated remote denial of service attack that could contribute to a crippling
                         on vulnerable datacenters under some conditions.</p>
-                    <p>The vulnerability (CVE-2017-8987) is rated “high severity”, with a CVSS base score of 8.6, and was discovered
+                    <p>The vulnerability <strong>(CVE-2017-8987)</strong> is rated “<i>high severity</i>”, with a CVSS base score of 8.6, and was discovered
                         by Rapid7 researchers in September. HPE publicly reported the bug on Feb. 22 and has made patches
                         available.
                     </p>
                     <p>Affected is the v1.88 firmware for HPE’s Integrated Lights-Out 3 (iLO3). Not impacted are newer versions
-                        of the firmware (1.8, 1.82, 1.85, and 1.87) along with firmware for iLO4 (v2.55). iLO5 devices were
+                        of the firmware <highlight>(1.8, 1.82, 1.85, and 1.87)</highlight> along with firmware for iLO4 (v2.55). iLO5 devices were
                         not tested, according to a Rapid7 technical brief on the vulnerability written by Sam Huckins, the
                         company’s program manager.</p>
                     <p>The Hewlett-Packard iLO is an embedded server management technology for ProLiant servers that consists
@@ -75,7 +75,7 @@
                 <h2>Sophisticated RedDrop Malware Targets Android Phones</h2>
                 <h4>by Lindsey O'Donnell</h4>
                 <article>
-
+                    <img class="fLeft img-flex" src="https://trtpost-wpengine.netdna-ssl.com/files/2013/07/android-doll-182x142.jpg">
                     <p>A sophisticated strain of mobile malware targeting Android devices can extract sensitive data and audio
                         recordings, run up premium SMS charges and then tries to extort money from victims.</p>
                     <p>According to security firm Wandera the malware, dubbed RedDrop, is being distributed inside 53 Android
@@ -124,17 +124,16 @@
                 </article>
             </main>
             <aside class="col-4">
+                    <h4 class="center">Editorials</h4>
                 <section>
-                    <h2>Inmate seriously injured in jail fight</h2>
-                    <h4>By Donna Thornton</h4>
+                    <h2>Gracefull downgrade or the case for &lt;strong&gt;</h2>
+                    <h4>By Steven Blakely</h4>
                     <article>
-                        <p>An Etowah County inmate is charged with attempted murder after he seriously injured a cellmate in a fight Tuesday night, according to Etowah County Sheriff Todd Entrekin.</p>
-                        <p>Joshua McDonald, 25, had been booked into the Etowah County Detention Center Nov. 29, 2017, for a probation violation.</p>
-                        <p>The inmate beaten during the fight Tuesday night was jailed for an unpaid traffic violation, according to Assistant Chief of Corrections Keith Peek and Lt. Brad Conaway.</p>
-                        <p>The 25-year-old man remains hospitalized.</p>
-                        <p>Entrekin said because of the seriousness of the victim’s injuries, the Cherokee County Sheriff’s Office was called in to investigate. He said Cherokee County investigators obtained the warrant for attempted murder Thursday.</p>
-                        <p>Entrekin said there were three men in the locked cell when the fight occurred. The third man was not involved in the altercation.</p>
-                        <p>While Entrekin said he didn’t know all the details of Cherokee County’s investigation, he understands the fight was over a prior drug debt.</p>
+                        <p>In the 20+ years I’ve been writing HTML, I always tested my own code in any way I could. I checked my it with the W3C Validator and eventually a validator called Bobby (never could make the Bobby Validator happy). I coded in notepad because WYSIWYG editors frustrated me with all the junk code they inserted. Eventually I ended up on Notepad++ on Windows and Vim and Adobe Brackets on Linux. I would open my code in IE, Netscape, Opera, and a little known browser that would eventually be called Firefox. Then came Chrome, the browser that finally took down IE. They all have thier place in history. But when you develope a project, do you consider the audence that can not use any of these?</p>
+                        <p>There are actually two audiences that fit into this category. One are the bots that make search engines usable. I know the modern Google bot is better than the bot of long ago, but that’s not the point. A basic data gathering bot might not understand your layout. The other audience includes individuals with visual impairment. What good is superior CSS work to either of these audiences? How do you code for everything and everyone? Sure, you can turn off all the web niceties in the developer tools in each browser. But what can you not turn off? So years back I went looking for something that would show me the basic web. What I found was Lynx.</p>
+                        <p>Lynx taught me to make sure that my code degraded gracefully. I started making navbars out of &lt;ul&gt; and CSS. The alt attribute for images became more than a short string that half heartedly described the picture or repeated the filename. I stoped doing layout in tables and started using tables as they were meant to be used. Lynx changed my basic philosophy as a web coder. My goal became to make something wonderful that still worked at the most basic level.</p>
+                        <p>Today I still use Lynx while in the development phase of web projects. Lynx ignores all CSS, javascript and images. It shows you what your site looks like to the most basic of bots and, more importantly, what the site looks like to the devices that assist the visually impaired. This is why I know that <strong>&lt;strong&gt;</strong>, <u>&lt;u&gt;</u>, and <i>&lt;i&gt;</i> are still important. If I open the page in Lynx that depends too heavily on CSS, it does not degrade gracefully. Sometimes, it is completely unusable. Thats when it becomes unconscionable to deny the use of tags that simply work.</p>
+                        <p>I purpose a compromise. Instead of <strong>&lt;div class=”someBoldClass”&gt;</strong>, I purpose styling the <strong>&lt;strong&gt;</strong> element in CSS. This gives the flexibility sought by those who use CSS for everything while providing the graceful downgrade that makes it work in the most basic of circumstances. Both parties in the argument get what they seek. It becomes a non-zero-sum game.</p>
                     </article>
                 </section>
                 <section>
