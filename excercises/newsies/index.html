@@ -32,108 +32,145 @@
     <div class="container">
         <div class="row">
             <main class="col-8">
-                <h2>Bug in HP Remote Management Tool leaves servers open to attack.</h2>
-                <h4>by Tom Spring</h4>
                 <article>
-                    <img class="fLeft img-flex" src="https://trtpost-wpengine.netdna-ssl.com/files/2018/03/servers_generic-182x142.jpg">
-                    <p>Hewlett Packard Enterprise has patched a vulnerability in its remote management hardware called Integrated
-                        Lights-Out 3 that is used in its popular line of HP ProLiant servers. The bug allows an attacker
-                        to launch an unauthenticated remote denial of service attack that could contribute to a crippling
-                        on vulnerable datacenters under some conditions.</p>
-                    <p>The vulnerability <strong>(CVE-2017-8987)</strong> is rated “<i>high severity</i>”, with a CVSS base score of 8.6, and was discovered
-                        by Rapid7 researchers in September. HPE publicly reported the bug on Feb. 22 and has made patches
-                        available.
-                    </p>
-                    <p>Affected is the v1.88 firmware for HPE’s Integrated Lights-Out 3 (iLO3). Not impacted are newer versions
-                        of the firmware <highlight>(1.8, 1.82, 1.85, and 1.87)</highlight> along with firmware for iLO4 (v2.55). iLO5 devices were
-                        not tested, according to a Rapid7 technical brief on the vulnerability written by Sam Huckins, the
-                        company’s program manager.</p>
-                    <p>The Hewlett-Packard iLO is an embedded server management technology for ProLiant servers that consists
-                        of a physical card with a separate network connection. It allows system administrators to remotely
-                        manage servers.</p>
-                    <p>“An attacker who has already compromised a network can now can easily lock out an admin from fixing or
-                        mitigating against an attack,” said Tod Beardsley, Rapid7’s research director. “An attacker can use
-                        this to make a data center go dark and keep it that way by locking out remote management and mitigation.”
-                        Alternatively, system administrators will have to tackle on-premises fixes.</p>
-                    <p>According to Beardsley, an attacker sharing the same network as a vulnerable iLO3 can simply send several
-                        HTTP requests and cause the iLO3 device (running firmware v1.88) to stop responding for up to 10
-                        minutes.</p>
-                    <p>One of those examples includes using a Secure Socket Shell where an “open sessions will become unresponsive;
-                        new SSH sessions will not be established.” In another scenario with a web portal “users cannot log
-                        into the web portal; the login page will not successfully load,” according to Rapid7.</p>
-                    <p>Where as HTTP GET and POST requests are benign, curl -X OPTIONS request to an iLO3 device can trigger
-                        the DoS condition. “Any method requested other than GET or POST will trigger the DoS, even invalid
-                        ones,” Beardsley wrote. “Ten minutes after the DoS is triggered, the watchdog (automatic system recovery)
-                        service restarts the device.”</p>
-                    <p>“An attack doesn’t require authentication. The device itself requires some kind of authentication, such
-                        as a web portal that you use to like login. But this attack comes in before that. The attack is literally
-                        just an HTTP command,” Beardsley said.</p>
-                    <p>According to Rapid7, HP’s Integrated Lights-Out is not on by default, which likely disqualifies many
-                        ProLiant from the vulnerability</p>
+                    <h2>Bug in HP Remote Management Tool leaves servers open to attack.</h2>
+                    <h4>by Tom Spring</h4>
+                    <div>
+                        <img class="fLeft img-flex" src="https://trtpost-wpengine.netdna-ssl.com/files/2018/03/servers_generic-182x142.jpg">
+                        <p>Hewlett Packard Enterprise has patched a vulnerability in its remote management hardware called Integrated
+                            Lights-Out 3 that is used in its popular line of HP ProLiant servers. The bug allows an attacker
+                            to launch an unauthenticated remote denial of service attack that could contribute to a crippling
+                            on vulnerable datacenters under some conditions.</p>
+                        <p>The vulnerability
+                            <strong>(CVE-2017-8987)</strong> is rated “
+                            <i>high severity</i>”, with a CVSS base score of 8.6, and was discovered by Rapid7 researchers in
+                            September. HPE publicly reported the bug on Feb. 22 and has made patches available.
+                        </p>
+                        <p>Affected is the v1.88 firmware for HPE’s Integrated Lights-Out 3 (iLO3). Not impacted are newer versions
+                            of the firmware
+                            <highlight>(1.8, 1.82, 1.85, and 1.87)</highlight> along with firmware for iLO4 (v2.55). iLO5 devices were
+                            not tested, according to a Rapid7 technical brief on the vulnerability written by Sam Huckins,
+                            the company’s program manager.</p>
+                        <p>The Hewlett-Packard iLO is an embedded server management technology for ProLiant servers that consists
+                            of a physical card with a separate network connection. It allows system administrators to remotely
+                            manage servers.</p>
+                        <p>“An attacker who has already compromised a network can now can easily lock out an admin from fixing
+                            or mitigating against an attack,” said Tod Beardsley, Rapid7’s research director. “An attacker
+                            can use this to make a data center go dark and keep it that way by locking out remote management
+                            and mitigation.” Alternatively, system administrators will have to tackle on-premises fixes.</p>
+                        <p>According to Beardsley, an attacker sharing the same network as a vulnerable iLO3 can simply send
+                            several HTTP requests and cause the iLO3 device (running firmware v1.88) to stop responding for
+                            up to 10 minutes.
+                        </p>
+                        <p>One of those examples includes using a Secure Socket Shell where an “open sessions will become unresponsive;
+                            new SSH sessions will not be established.” In another scenario with a web portal “users cannot
+                            log into the web portal; the login page will not successfully load,” according to Rapid7.</p>
+                        <p>Where as HTTP GET and POST requests are benign, curl -X OPTIONS request to an iLO3 device can trigger
+                            the DoS condition. “Any method requested other than GET or POST will trigger the DoS, even invalid
+                            ones,” Beardsley wrote. “Ten minutes after the DoS is triggered, the watchdog (automatic system
+                            recovery) service restarts the device.”</p>
+                        <p>“An attack doesn’t require authentication. The device itself requires some kind of authentication,
+                            such as a web portal that you use to like login. But this attack comes in before that. The attack
+                            is literally just an HTTP command,” Beardsley said.</p>
+                        <p>According to Rapid7, HP’s Integrated Lights-Out is not on by default, which likely disqualifies many
+                            ProLiant from the vulnerability</p>
+                    </div>
                 </article>
                 <hr />
-                <h2>Sophisticated RedDrop Malware Targets Android Phones</h2>
-                <h4>by Lindsey O'Donnell</h4>
                 <article>
-                    <img class="fLeft img-flex" src="https://trtpost-wpengine.netdna-ssl.com/files/2013/07/android-doll-182x142.jpg">
-                    <p>A sophisticated strain of mobile malware targeting Android devices can extract sensitive data and audio
-                        recordings, run up premium SMS charges and then tries to extort money from victims.</p>
-                    <p>According to security firm Wandera the malware, dubbed RedDrop, is being distributed inside 53 Android
-                        applications promoted on third-party app stores. Apps range from image editors, calculators, language
-                        learning tools and adult themed apps. According to Wandera, the criminals had targeted victims working
-                        at several“Big Four” consultancy firms.</p>
-                    <p>“RedDrop is one of the most sophisticated pieces of Android malware that we have seen in broad distribution,”
-                        said Wandera in an overview of its research published Wednesday. “Not only does the attacker utilize
-                        a wide range of functioning malicious applications to entice the victim, they’ve also perfected every
-                        tiny detail to ensure their actions are difficult to trace.”</p>
-                    <p>Wandera told Threatpost it’s unsure how many Android devices may be infected with the malware. “One thing
-                        we have noticed is that the pace of attempted infections appears to be accelerating,” Wandera said.
-                        Since the company initially identified the malware, the company has blocked roughly 20 further requests
-                        by infected apps to reach the criminal’s distribution network – where additional malware would be
-                        downloaded from.</p>
-                    <p>The apps are being promoted via ads displayed on the popular Chinese search engine Baidu. Researchers
-                        said those who click on the ads are “taken to huxiawang[.]cn, the primary distribution site for the
-                        attack. The landing pages that follow host various content to encourage and incite the user to download
-                        one of the 53 apps within the RedDrop family of malicious apps.”</p>
-                    <p>Once the RedDrop-infected apps are installed the program silently downloads an additional seven Android
-                        application packages (APK) that add additional spyware and malicious components such as trojans,
-                        premium SMS functionality and additional dropper software.</p>
-                    <p>“When the user interacts with the app, each interaction secretly triggers the sending of an SMS to a
-                        premium service, which is then instantly deleted before it can be detected,” the company said.</p>
-                    <p>The rogue apps are capable of harvesting sensitive data, including passively recording audio of the device’s
-                        surroundings, accessing photos, contacts, and extracting locally saved files.</p>
-                    <p>Data siphoned off phones are uploaded to the attacker’s Dropbox account to be used in conjunction with
-                        further attacks and for possible extortion purposes.</p>
+                    <h2>Sophisticated RedDrop Malware Targets Android Phones</h2>
+                    <h4>by Lindsey O'Donnell</h4>
+                    <div>
+                        <img class="fLeft img-flex" src="https://trtpost-wpengine.netdna-ssl.com/files/2013/07/android-doll-182x142.jpg">
+                        <p>A sophisticated strain of mobile malware targeting Android devices can extract sensitive data and
+                            audio recordings, run up premium SMS charges and then tries to extort money from victims.</p>
+                        <p>According to security firm Wandera the malware, dubbed RedDrop, is being distributed inside 53 Android
+                            applications promoted on third-party app stores. Apps range from image editors, calculators,
+                            language learning tools and adult themed apps. According to Wandera, the criminals had targeted
+                            victims working at several“Big Four” consultancy firms.</p>
+                        <p>“RedDrop is one of the most sophisticated pieces of Android malware that we have seen in broad distribution,”
+                            said Wandera in an overview of its research published Wednesday. “Not only does the attacker
+                            utilize a wide range of functioning malicious applications to entice the victim, they’ve also
+                            perfected every tiny detail to ensure their actions are difficult to trace.”</p>
+                        <p>Wandera told Threatpost it’s unsure how many Android devices may be infected with the malware. “One
+                            thing we have noticed is that the pace of attempted infections appears to be accelerating,” Wandera
+                            said. Since the company initially identified the malware, the company has blocked roughly 20
+                            further requests by infected apps to reach the criminal’s distribution network – where additional
+                            malware would be downloaded from.</p>
+                        <p>The apps are being promoted via ads displayed on the popular Chinese search engine Baidu. Researchers
+                            said those who click on the ads are “taken to huxiawang[.]cn, the primary distribution site for
+                            the attack. The landing pages that follow host various content to encourage and incite the user
+                            to download one of the 53 apps within the RedDrop family of malicious apps.”</p>
+                        <p>Once the RedDrop-infected apps are installed the program silently downloads an additional seven Android
+                            application packages (APK) that add additional spyware and malicious components such as trojans,
+                            premium SMS functionality and additional dropper software.</p>
+                        <p>“When the user interacts with the app, each interaction secretly triggers the sending of an SMS to
+                            a premium service, which is then instantly deleted before it can be detected,” the company said.</p>
+                        <p>The rogue apps are capable of harvesting sensitive data, including passively recording audio of the
+                            device’s surroundings, accessing photos, contacts, and extracting locally saved files.</p>
+                        <p>Data siphoned off phones are uploaded to the attacker’s Dropbox account to be used in conjunction
+                            with further attacks and for possible extortion purposes.</p>
+                    </div>
                 </article>
                 <hr />
-                <h2>Ad network circumvents ad-blocking tools to run in-browser cryptojacker scripts</h2>
-                <h4>by Lindsey O'Donnell</h4>
                 <article>
-
-                    <p>Cryptojackers are getting resourceful and have figured out how to bypass ad-blocking software and deliver
-                        the Coinhive JavaScript miner via browser-based ads. Researchers at Qihoo’s Netlab 360 said it recently
-                        spotted an advertising network that was using what is called a domain generation algorithm tool to
-                        evade ad-blocking tools and serve up ads that link to landing pages that contain the cryptominer
-                        Coinhive.
-                    </p>
-                    <p>Researchers are not identifying the ad network, but they said that since 2017 the provider has used domain
-                        generation algorithms (DGA) to effectively circumvent ad blockers. </p>
-                    <p>“Starting from 2017-12, the bar got raised again and we began to see these DGA.popad domains participating
-                        in cryptojacking without end-users acknowledgement,” Zhang Zaifeng, researcher with Netlab 360, wrote
-                        in a post.</p>
+                    <h2>Ad network circumvents ad-blocking tools to run in-browser cryptojacker scripts</h2>
+                    <h4>by Lindsey O'Donnell</h4>
+                    <div>
+                        <p>Cryptojackers are getting resourceful and have figured out how to bypass ad-blocking software and
+                            deliver the Coinhive JavaScript miner via browser-based ads. Researchers at Qihoo’s Netlab 360
+                            said it recently spotted an advertising network that was using what is called a domain generation
+                            algorithm tool to evade ad-blocking tools and serve up ads that link to landing pages that contain
+                            the cryptominer Coinhive.
+                        </p>
+                        <p>Researchers are not identifying the ad network, but they said that since 2017 the provider has used
+                            domain generation algorithms (DGA) to effectively circumvent ad blockers. </p>
+                        <p>“Starting from 2017-12, the bar got raised again and we began to see these DGA.popad domains participating
+                            in cryptojacking without end-users acknowledgement,” Zhang Zaifeng, researcher with Netlab 360,
+                            wrote in a post.</p>
+                    </div>
                 </article>
             </main>
             <aside class="col-4">
-                    <h4 class="center">Editorials</h4>
                 <section>
+                    <h4 class="center">Editorials</h4>
                     <h2>Gracefull downgrade or the case for &lt;strong&gt;</h2>
                     <h4>By Steven Blakely</h4>
                     <article>
-                        <p>In the 20+ years I’ve been writing HTML, I always tested my own code in any way I could. I checked my it with the W3C Validator and eventually a validator called Bobby (never could make the Bobby Validator happy). I coded in notepad because WYSIWYG editors frustrated me with all the junk code they inserted. Eventually I ended up on Notepad++ on Windows and Vim and Adobe Brackets on Linux. I would open my code in IE, Netscape, Opera, and a little known browser that would eventually be called Firefox. Then came Chrome, the browser that finally took down IE. They all have thier place in history. But when you develope a project, do you consider the audence that can not use any of these?</p>
-                        <p>There are actually two audiences that fit into this category. One are the bots that make search engines usable. I know the modern Google bot is better than the bot of long ago, but that’s not the point. A basic data gathering bot might not understand your layout. The other audience includes individuals with visual impairment. What good is superior CSS work to either of these audiences? How do you code for everything and everyone? Sure, you can turn off all the web niceties in the developer tools in each browser. But what can you not turn off? So years back I went looking for something that would show me the basic web. What I found was Lynx.</p>
-                        <p>Lynx taught me to make sure that my code degraded gracefully. I started making navbars out of &lt;ul&gt; and CSS. The alt attribute for images became more than a short string that half heartedly described the picture or repeated the filename. I stoped doing layout in tables and started using tables as they were meant to be used. Lynx changed my basic philosophy as a web coder. My goal became to make something wonderful that still worked at the most basic level.</p>
-                        <p>Today I still use Lynx while in the development phase of web projects. Lynx ignores all CSS, javascript and images. It shows you what your site looks like to the most basic of bots and, more importantly, what the site looks like to the devices that assist the visually impaired. This is why I know that <strong>&lt;strong&gt;</strong>, <u>&lt;u&gt;</u>, and <i>&lt;i&gt;</i> are still important. If I open the page in Lynx that depends too heavily on CSS, it does not degrade gracefully. Sometimes, it is completely unusable. Thats when it becomes unconscionable to deny the use of tags that simply work.</p>
-                        <p>I purpose a compromise. Instead of <strong>&lt;div class=”someBoldClass”&gt;</strong>, I purpose styling the <strong>&lt;strong&gt;</strong> element in CSS. This gives the flexibility sought by those who use CSS for everything while providing the graceful downgrade that makes it work in the most basic of circumstances. Both parties in the argument get what they seek. It becomes a non-zero-sum game.</p>
+                        <p>In the 20+ years I’ve been writing HTML, I always tested my own code in any way I could. I checked
+                            my it with the W3C Validator and eventually a validator called Bobby (never could make the Bobby
+                            Validator happy). I coded in notepad because WYSIWYG editors frustrated me with all the junk
+                            code they inserted. Eventually I ended up on Notepad++ on Windows and Vim and Adobe Brackets
+                            on Linux. I would open my code in IE, Netscape, Opera, and a little known browser that would
+                            eventually be called Firefox. Then came Chrome, the browser that finally took down IE. They all
+                            have thier place in history. But when you develope a project, do you consider the audence that
+                            can not use any of these?</p>
+                        <p>There are actually two audiences that fit into this category. One are the bots that make search engines
+                            usable. I know the modern Google bot is better than the bot of long ago, but that’s not the point.
+                            A basic data gathering bot might not understand your layout. The other audience includes individuals
+                            with visual impairment. What good is superior CSS work to either of these audiences? How do you
+                            code for everything and everyone? Sure, you can turn off all the web niceties in the developer
+                            tools in each browser. But what can you not turn off? So years back I went looking for something
+                            that would show me the basic web. What I found was Lynx.</p>
+                        <p>Lynx taught me to make sure that my code degraded gracefully. I started making navbars out of &lt;ul&gt;
+                            and CSS. The alt attribute for images became more than a short string that half heartedly described
+                            the picture or repeated the filename. I stoped doing layout in tables and started using tables
+                            as they were meant to be used. Lynx changed my basic philosophy as a web coder. My goal became
+                            to make something wonderful that still worked at the most basic level.</p>
+                        <p>Today I still use Lynx while in the development phase of web projects. Lynx ignores all CSS, javascript
+                            and images. It shows you what your site looks like to the most basic of bots and, more importantly,
+                            what the site looks like to the devices that assist the visually impaired. This is why I know
+                            that
+                            <strong>&lt;strong&gt;</strong>,
+                            <u>&lt;u&gt;</u>, and
+                            <i>&lt;i&gt;</i> are still important. If I open the page in Lynx that depends too heavily on CSS,
+                            it does not degrade gracefully. Sometimes, it is completely unusable. Thats when it becomes unconscionable
+                            to deny the use of tags that simply work.</p>
+                        <p>I purpose a compromise. Instead of
+                            <strong>&lt;div class=”someBoldClass”&gt;</strong>, I purpose styling the
+                            <strong>&lt;strong&gt;</strong> element in CSS. This gives the flexibility sought by those who use CSS
+                            for everything while providing the graceful downgrade that makes it work in the most basic of
+                            circumstances. Both parties in the argument get what they seek. It becomes a non-zero-sum game.</p>
                     </article>
                 </section>
                 <section>
@@ -160,9 +197,6 @@
                         </div>
                     </div>
                 </section>
-                <section>
-
-                </section>
         </div>
     </div>
     <footer>
@@ -170,7 +204,6 @@
             &copy; 2018 Newsies
         </div>
     </footer>
-    </div>
 </body>
 
 </html>

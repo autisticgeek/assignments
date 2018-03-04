@@ -30,7 +30,7 @@ html {
     margin-top: 0;
     margin-bottom: 0.5rem;
   }
-  article{
+  article div{
     column-count: 3;
     text-align: justify;
   }
