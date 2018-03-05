@@ -31,7 +31,7 @@ html {
     margin-bottom: 0.5rem;
   }
   article div{
-    column-count: 3;
+    column-count: 2;
     text-align: justify;
   }
   aside article{
@@ -174,9 +174,9 @@ pre, code {
     flex: 0 0 100%;
     max-width: 100%;
   }
-  
-
-
+nav{
+  margin-bottom: 1rem;
+}
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -191,12 +191,34 @@ footer {
   padding-top:3rem;
   padding-bottom:1rem;
 }
-
+nav ul {
+  padding:0;
+  margin:0;
+  width:79%;
+  display: inline-block;
+  text-align: right;
+}
 nav ul li {
     display: inline;
-    padding-right: 2rem;
+    padding-left: 2rem;
+}
+nav .brand {
+  padding:0;
+  margin:0px !important;
+  width:20%;
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+nav .container{
+  padding:0;
 }
 header h1{
+  position: relative;
     font-size: 80px;
 }
 header h4{
@@ -224,6 +246,10 @@ header h4{
     display: inline-block;
     border: 1px solid darkblue;
     text-align: center;
+    padding:0.3rem;
+}
+.classAd strong{
+  display:block;
 }
 .top-bottom-border{
     border-top: darkblue solid thin;

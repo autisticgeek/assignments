@@ -65,4 +65,22 @@ console.log(fibonacci(9))
 // }
 // quad(6, 11, -35);
 
-// cc
+var duplicates = function (str) {
+    var output = {
+        unique: [],
+        count: [],
+        extras: []
+    }
+    for (var i = 0; i < str.length; i++) {
+        if (str.indexOf(str[i]) == i) {
+            output.unique.push(str[i]);
+            var re = new RegExp(output.unique[i],'g')
+            var count = (str.match(re)).length;
+            output.count.push(count);
+        } else {
+            output.extras.push(str[i]);
+        }
+    }
+    return output;
+}
+console.log(duplicates("hello darkness my old friend"));
