@@ -45,3 +45,5 @@ console.log("food: ", food);
 
 // Log your array as a string to the console.
 console.log("food: ", food);
+
+
