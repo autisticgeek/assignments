@@ -1,0 +1,265 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.flag4by6 {
+    height: 120px;
+    width: 180px;
+    border: thin solid black;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.flag1by1 {
+    height: 180px;
+    width: 180px;
+    border: thin solid black;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+#france .one {
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: blue;
+}
+
+#france .two {
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    top: 0px;
+    left: 60px;
+    background-color: white
+}
+
+#france .three {
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    top: 0px;
+    left: 120px;
+    background-color: red;
+}
+
+#germany .one {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+}
+
+#germany .two {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 40px;
+    left: 0px;
+    background-color: red;
+}
+
+#germany .three {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 78px;
+    left: 0px;
+    background-color: yellow;
+}
+
+#madagascar .one {
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+}
+
+#madagascar .two {
+    position: absolute;
+    width: 120px;
+    height: 50%;
+    top: 0px;
+    left: 58px;
+    background-color: red;
+}
+
+#madagascar .three {
+    position: absolute;
+    width: 120px;
+    height: 50%;
+    top: 59px;
+    left: 58px;
+    background-color: green;
+}
+
+#switzerland .base {
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    height: 100%;
+}
+
+#switzerland .one {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 72px;
+    left: 72px;
+    background-color: white;
+}
+
+#switzerland .two {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 36px;
+    left: 72px;
+    background-color: white;
+}
+
+#switzerland .three {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 108px;
+    left: 72px;
+    background-color: white;
+}
+#switzerland .four {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 72px;
+    left: 36px;
+    background-color: white;
+}
+#switzerland .five {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 72px;
+    left: 108px;
+    background-color: white;
+}
+#sweden .base{
+    position: absolute;
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+}
+#sweden .one {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top: 50px;
+    left: 0px;
+    background-color:yellow;
+}
+#sweden .two {
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    top: 0px;
+    left: 60px;
+    background-color: yellow;
+}
+#gambia .base {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+#gambia .one {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 0px;
+    left: 0px;
+    background-color: red;
+}
+#gambia .two {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top: 48px;
+    left: 0px;
+    background-color: blue;
+}
+#gambia .three {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 78px;
+    left: 0px;
+    background-color: green;
+}
+#tonga .base {
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    height: 100%;
+}
+#tonga .corner {
+    position: absolute;
+    background-color: white;
+    width: 80px;
+    height: 60px;
+}
+#tonga .one {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 20px;
+    left: 35px;
+    background-color: red;
+}
+
+#tonga .two {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    left: 35px;
+    background-color: red;
+}
+
+#tonga .three {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 30px;
+    left: 35px;
+    background-color: red;
+}
+#tonga .four {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 20px;
+    left: 0px;
+    background-color: red;
+}
+#tonga .five {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 20px;
+    left: 0px;
+    background-color: red;
+}
