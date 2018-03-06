@@ -12,16 +12,16 @@
 }
 
 .flag4by6 {
-    height: 120px;
-    width: 180px;
+    height: 240px;
+    width: 360px;
     border: thin solid black;
     position: relative;
     margin-bottom: 5rem;
 }
 
 .flag1by1 {
-    height: 180px;
-    width: 180px;
+    height: 360px;
+    width: 360px;
     border: thin solid black;
     position: relative;
     margin-bottom: 5rem;
@@ -29,7 +29,7 @@
 
 #france .one {
     position: absolute;
-    width: 60px;
+    width: 120px;
     height: 100%;
     top: 0px;
     left: 0px;
@@ -38,26 +38,26 @@
 
 #france .two {
     position: absolute;
-    width: 60px;
+    width: 120px;
     height: 100%;
     top: 0px;
-    left: 60px;
+    left: 120px;
     background-color: white
 }
 
 #france .three {
     position: absolute;
-    width: 60px;
+    width: 120px;
     height: 100%;
     top: 0px;
-    left: 120px;
+    left: 240px;
     background-color: red;
 }
 
 #germany .one {
     position: absolute;
     width: 100%;
-    height: 40px;
+    height: 80px;
     top: 0px;
     left: 0px;
     background-color: black;
@@ -66,8 +66,8 @@
 #germany .two {
     position: absolute;
     width: 100%;
-    height: 40px;
-    top: 40px;
+    height: 80px;
+    top: 80px;
     left: 0px;
     background-color: red;
 }
@@ -75,15 +75,15 @@
 #germany .three {
     position: absolute;
     width: 100%;
-    height: 40px;
-    top: 78px;
+    height: 80px;
+    top: 158px;
     left: 0px;
     background-color: yellow;
 }
 
 #madagascar .one {
     position: absolute;
-    width: 60px;
+    width: 120px;
     height: 100%;
     top: 0px;
     left: 0px;
@@ -92,19 +92,19 @@
 
 #madagascar .two {
     position: absolute;
-    width: 120px;
-    height: 50%;
+    width: 240px;
+    height: 120px;
     top: 0px;
-    left: 58px;
+    left: 120px;
     background-color: red;
 }
 
 #madagascar .three {
     position: absolute;
-    width: 120px;
-    height: 50%;
-    top: 59px;
-    left: 58px;
+    width: 240px;
+    height: 120px;
+    top: 119px;
+    left: 120px;
     background-color: green;
 }
 
@@ -117,149 +117,366 @@
 
 #switzerland .one {
     position: absolute;
-    width: 36px;
-    height: 36px;
-    top: 72px;
-    left: 72px;
+    width: 72px;
+    height: 72px;
+    top: 144px;
+    left: 144px;
     background-color: white;
 }
 
 #switzerland .two {
     position: absolute;
-    width: 36px;
-    height: 36px;
-    top: 36px;
-    left: 72px;
+    width: 72px;
+    height: 72px;
+    top: 72px;
+    left: 144px;
     background-color: white;
 }
 
 #switzerland .three {
     position: absolute;
-    width: 36px;
-    height: 36px;
-    top: 108px;
+    width: 72px;
+    height: 72px;
+    top: 216px;
+    left: 144px;
+    background-color: white;
+}
+
+#switzerland .four {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    top: 144px;
     left: 72px;
     background-color: white;
 }
-#switzerland .four {
-    position: absolute;
-    width: 36px;
-    height: 36px;
-    top: 72px;
-    left: 36px;
-    background-color: white;
-}
+
 #switzerland .five {
     position: absolute;
-    width: 36px;
-    height: 36px;
-    top: 72px;
-    left: 108px;
+    width: 72px;
+    height: 72px;
+    top: 144px;
+    left: 216px;
     background-color: white;
 }
-#sweden .base{
+
+#sweden .base {
     position: absolute;
     background-color: blue;
     width: 100%;
     height: 100%;
 }
+
 #sweden .one {
     position: absolute;
     width: 100%;
-    height: 20px;
-    top: 50px;
+    height: 40px;
+    top: 100px;
     left: 0px;
-    background-color:yellow;
-}
-#sweden .two {
-    position: absolute;
-    width: 20px;
-    height: 100%;
-    top: 0px;
-    left: 60px;
     background-color: yellow;
 }
+
+#sweden .two {
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    top: 0px;
+    left: 100px;
+    background-color: yellow;
+}
+
 #gambia .base {
     position: absolute;
     background-color: white;
     width: 100%;
     height: 100%;
 }
+
 #gambia .one {
     position: absolute;
     width: 100%;
-    height: 40px;
+    height: 80px;
     top: 0px;
     left: 0px;
     background-color: red;
 }
+
 #gambia .two {
     position: absolute;
     width: 100%;
-    height: 20px;
-    top: 48px;
+    height: 45px;
+    top: 95px;
     left: 0px;
     background-color: blue;
 }
+
 #gambia .three {
     position: absolute;
     width: 100%;
-    height: 40px;
-    top: 78px;
+    height: 80px;
+    top: 158px;
     left: 0px;
     background-color: green;
 }
+
 #tonga .base {
     position: absolute;
     background-color: red;
     width: 100%;
     height: 100%;
 }
+
 #tonga .corner {
     position: absolute;
     background-color: white;
-    width: 80px;
-    height: 60px;
+    width: 160px;
+    height: 120px;
 }
+
 #tonga .one {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 20px;
-    left: 35px;
+    width: 20px;
+    height: 20px;
+    top: 45px;
+    left: 70px;
     background-color: red;
 }
 
 #tonga .two {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 10px;
-    left: 35px;
+    width: 20px;
+    height: 20px;
+    top: 25px;
+    left: 70px;
     background-color: red;
 }
 
 #tonga .three {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 30px;
-    left: 35px;
+    width: 20px;
+    height: 20px;
+    top: 65px;
+    left: 70px;
     background-color: red;
 }
+
 #tonga .four {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 20px;
-    left: 0px;
+    width: 20px;
+    height: 20px;
+    top: 45px;
+    left: 50px;
     background-color: red;
 }
+
 #tonga .five {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 20px;
-    left: 0px;
+    width: 20px;
+    height: 20px;
+    top: 45px;
+    left: 90px;
     background-color: red;
+}
+
+#japan .base {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+#japan .one {
+    position: absolute;
+    background-color: red;
+    width: 160px;
+    height: 160px;
+    top: 39px;
+    left: 99px;
+    -moz-border-radius: 80px;
+    -webkit-border-radius: 80px;
+    border-radius: 80px;
+}
+
+#greece .one {
+    position: absolute;
+    width: 100%;
+    height: 27px;
+    background-color: blue;
+    top: 0px;
+    left: 0px;
+}
+
+#greece .two {
+    position: absolute;
+    width: 100%;
+    height: 26px;
+    background-color: white;
+    top: 27px;
+    left: 0px;
+}
+
+#greece .three {
+    position: absolute;
+    width: 100%;
+    height: 27px;
+    background-color: blue;
+    top: 53px;
+    left: 0px;
+}
+
+#greece .four {
+    position: absolute;
+    width: 100%;
+    height: 26px;
+    background-color: white;
+    top: 80px;
+    left: 0px;
+}
+
+#greece .five {
+    position: absolute;
+    width: 100%;
+    height: 27px;
+    background-color: blue;
+    top: 105px;
+    left: 0px;
+}
+
+#greece .six {
+    position: absolute;
+    width: 100%;
+    height: 26px;
+    background-color: white;
+    top: 132px;
+    left: 0px;
+}
+
+#greece .seven {
+    position: absolute;
+    width: 100%;
+    height: 27px;
+    background-color: blue;
+    top: 158px;
+    left: 0px;
+}
+
+#greece .eight {
+    position: absolute;
+    width: 100%;
+    height: 26px;
+    background-color: white;
+    top: 185px;
+    left: 0px;
+}
+
+#greece .nine {
+    position: absolute;
+    width: 100%;
+    height: 27px;
+    background-color: blue;
+    top: 211px;
+    left: 0px;
+}
+
+#greece .corner {
+    position: absolute;
+    background-color: blue;
+    width: 160px;
+    height: 132px;
+}
+
+#greece .ten {
+    position: absolute;
+    width: 100%;
+    height: 27px;
+    background-color: white;
+    top: 54px;
+    left: 0px;
+}
+
+#greece .eleven {
+    position: absolute;
+    width: 27px;
+    height: 100%;
+    background-color: white;
+    top: 0px;
+    left: 67px;
+}
+
+#niger .one {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: 0px;
+    left: 0px;
+    background-color: orange;
+}
+
+#niger .two {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: 80px;
+    left: 0px;
+    background-color: white;
+}
+
+#niger .three {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: 158px;
+    left: 0px;
+    background-color: green;
+}
+
+#niger .circle {
+    position: absolute;
+    background-color: orange;
+    width: 70px;
+    height: 70px;
+    top: 4px;
+    left: 144px;
+    -moz-border-radius: 80px;
+    -webkit-border-radius: 80px;
+    border-radius: 80px;
+}
+
+#maldives .base {
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    height: 100%;
+}
+
+#maldives .one {
+    position: absolute;
+    background-color: green;
+    width: 225px;
+    height: 140px;
+    left: 60px;
+    top: 50px;
+}
+
+#maldives .circle1 {
+    position: absolute;
+    background-color: white;
+    width: 115px;
+    height: 110px;
+    left: 80px;
+    top: 15px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+}
+#maldives .circle2 {
+    position: absolute;
+    background-color: green;
+    width: 115px;
+    height: 110px;
+    left: 95px;
+    top: 15px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
 }
