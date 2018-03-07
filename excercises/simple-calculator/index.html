@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simple Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+
+<body>
+    <main>
+        <div id="add">
+            <form id="addForm">
+                <input type="num" name="x" required/>
+                <input type="num" name="y" required/>
+                <input type="submit" value="ADD" name="operation" />
+            </form>
+        </div>
+        <div id="sub">
+            <form id="subForm">
+                <input type="num" name="x" required/>
+                <input type="num" name="y" required/>
+                <input type="submit" value="SUBTRACT" name="operation" />
+            </form>
+        </div>
+        <div id="mult">
+            <form id="multForm">
+                <input type="num" name="x" required/>
+                <input type="num" name="y" required/>
+                <input type="submit" value="MULTIPLY" name="operation" />
+            </form>
+        </div>
+    </main>
+    <div id="total"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>
