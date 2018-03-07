@@ -1,20 +1,33 @@
-*{
+* {
     box-sizing: border-box;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
 main div {
-    display:inline-block;
-    width:33%;
+    display: inline-block;
+    width: 33%;
     text-align: center;
-    padding:10rem;
+    padding: 7rem;
 }
-#add{
-    background-color:rgba(255, 0, 0, 0.2);
+
+#add {
+    background-color: rgba(0, 255, 0, 0.5);
 }
-#sub{
-    background-color:rgba(0, 255, 0, 0.2);
+
+#sub {
+    background-color: rgba(255, 0, 0, 0.2);
 }
-#mult{
-    background-color:rgba(0, 0, 255, 0.2);
+
+#mult {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+#answers{
+    text-align: center;
 }

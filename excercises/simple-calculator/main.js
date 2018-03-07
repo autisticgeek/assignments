@@ -3,7 +3,8 @@ function insert() {
     var x = this.children[0].value;
     var y = this.children[1].value;
     var e = this.children[2].value;
-    document.getElementById("total").innerHTML = operation(e, x, y);
+    document.getElementById("answers").innerHTML += '<h1>'+ operation(e, x, y) +'</h1>';
+    this.reset();
 }
 
 function operation(e, x, y) {
@@ -16,7 +17,8 @@ function operation(e, x, y) {
             equ = subtract(x, y);
             break;
         case "MULTIPLY":
-            equ = multiply(x, y)
+            equ = multiply(x, y);
+            break;
     }
     return equ;
 }
@@ -36,7 +38,7 @@ function subtract(x, y) {
     var yvar = y;
     y = parseInt(y, 10);
     var sum = x - y;
-    return xvar + " + " + yvar + " = " + sum;
+    return xvar + " - " + yvar + " = " + sum;
 }
 
 function multiply(x, y) {
@@ -45,7 +47,7 @@ function multiply(x, y) {
     var yvar = y;
     y = parseInt(y, 10);
     var sum = x * y;
-    return xvar + " + " + yvar + " = " + sum;
+    return xvar + " · " + yvar + " = " + sum;
 }
 
 document.getElementById("addForm").addEventListener("submit", insert);
