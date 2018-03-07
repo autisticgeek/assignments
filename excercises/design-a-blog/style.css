@@ -86,11 +86,13 @@ article h3 {
 article .imgL {
     float: left;
     margin-right: 0.75rem;
+    margin-top:1rem;
 }
 
 article .imgR {
     float: right;
     margin-left: 0.75rem;
+    margin-top:1rem;
 }
 
 footer {
