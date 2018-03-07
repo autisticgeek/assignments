@@ -1,13 +1,13 @@
-function insert() {
+var insert = function () {
     event.preventDefault();
     var x = this.children[0].value;
     var y = this.children[1].value;
     var e = this.children[2].value;
-    document.getElementById("answers").innerHTML += '<h1>'+ operation(e, x, y) +'</h1>';
+    document.getElementById("answers").innerHTML += '<h1>' + operation(e, x, y) + '</h1>';
     this.reset();
 }
 
-function operation(e, x, y) {
+var operation = function (e, x, y) {
     var equ;
     switch (e) {
         case "ADD":
@@ -23,7 +23,7 @@ function operation(e, x, y) {
     return equ;
 }
 
-function add(x, y) {
+var add = function (x, y) {
     var xvar = x;
     x = parseInt(x, 10);
     var yvar = y;
@@ -32,7 +32,7 @@ function add(x, y) {
     return xvar + " + " + yvar + " = " + sum;
 }
 
-function subtract(x, y) {
+var subtract = function (x, y) {
     var xvar = x;
     x = parseInt(x, 10);
     var yvar = y;
@@ -41,7 +41,7 @@ function subtract(x, y) {
     return xvar + " - " + yvar + " = " + sum;
 }
 
-function multiply(x, y) {
+var multiply = function (x, y) {
     var xvar = x;
     x = parseInt(x, 10);
     var yvar = y;
