@@ -1,6 +1,7 @@
 h3{
     margin-bottom:0.25em;
 }
+
 form {
     position: absolute;
     top:50%;
@@ -8,8 +9,14 @@ form {
     transform: translateX(-50%) translateY(-50%);
     border: thin solid royalblue;
     border-radius: 10px;
-    padding:1em;
+    padding:8rem;
+    /* padding-top: 0rem; */
     background-color: whitesmoke;
+}
+#fullDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 label{
@@ -17,4 +24,16 @@ label{
 }
 #textFields input, select{
     display: block;
+}
+.btn-group {
+    display: flex;
+    justify-content: space-around;
+}
+.btn-group input{
+    border: thin solid royalblue;
+    border-radius: 10px;
+    padding:1em;
+}
+.btn-group input:focus  {
+    outline: none;
 }
