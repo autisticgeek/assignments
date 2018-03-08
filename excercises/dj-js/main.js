@@ -19,7 +19,6 @@ var changeStyle = function (event) {
     }
 }
 var useKeyboardChangeStyle = function (event) {
-    console.log(event.which);
     switch (event.which) {
         case 66:
             changeColor("blue");

@@ -6,4 +6,5 @@
     left:50%;
     transform: translateX(-50%) translateY(-50%);
     border:thin solid rgba(100, 100, 100, 0.5);
+    border-radius: 20%;
 }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+
+<body>
+    <form id="theForm">
+        <div>
+            <h3>Identity</h3>
+            <span id="textFields">
+                <input type="text" name="fName" placeholder="First Name" />
+                <input type="text" name="lName" placeholder="Last Name" />
+                <input type="number" name="age" Placeholder="Age" />
+            </span>
+            <label for="male">
+                <input id="male" type="radio" name="gender" value="male"> Male
+            </label>
+            <label for="female">
+                <input id="female" type="radio" name="gender" value="female"> Female
+            </label>
+        </div>
+        <div>
+            <h3>Destination</h3>
+            <select name="dest">
+                <option value="ATL">Atlanta</option>
+                <option value="JFK">New York</option>
+                <option value="SJI">San Jose</option>
+            </select>
+        </div>
+        <div>
+            <h3>Food Options</h3>
+            <label for="vegetarian">
+                <input id="vegetarian" type="checkbox" name="vegetarian"> Vegetarian
+            </label>
+            <label for="kosher">
+                <input id="kosher" type="checkbox" name="kosher"> Kosher
+            </label>
+            <label for="lactoseFree">
+                <input id="lactoseFree" type="checkbox" name="lactoseFree"> Lactose Free
+            </label>
+        </div>
+    </form>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
