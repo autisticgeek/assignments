@@ -24,30 +24,25 @@ var operation = function (e, x, y) {
 }
 
 var add = function (x, y) {
-    var xvar = x;
-    x = parseInt(x, 10);
-    var yvar = y;
-    y = parseInt(y, 10);
+    x=parseFloat(x);
+    y=parseFloat(y);
     var sum = x + y;
-    return xvar + " + " + yvar + " = " + sum;
+    return x + " + " + y + " = " + sum;
 }
 
 var subtract = function (x, y) {
-    var xvar = x;
-    x = parseInt(x, 10);
-    var yvar = y;
-    y = parseInt(y, 10);
+    x=parseFloat(x);
+    y=parseFloat(y);
     var sum = x - y;
-    return xvar + " - " + yvar + " = " + sum;
+    return x + " - " + y + " = " + sum;
+
 }
 
 var multiply = function (x, y) {
-    var xvar = x;
-    x = parseInt(x, 10);
-    var yvar = y;
-    y = parseInt(y, 10);
+    x=parseFloat(x);
+    y=parseFloat(y);
     var sum = x * y;
-    return xvar + " · " + yvar + " = " + sum;
+    return x + " · " + y + " = " + sum;
 }
 
 document.getElementById("addForm").addEventListener("submit", insert);

@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    background-color: rgba(210, 215, 39, 0.5)
+}
+
+header {
+    background-color: rgba(0, 0, 255, 0.5)
+}
+
+main {
+    background-color: rgba(38, 255, 0, 0.5)
+}
+
+footer {
+    background-color: rgba(255, 0, 13, 0.5)
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width:403px) {
+    .container {
+        max-width: 353px;
+    }
+}
+@media (min-width:576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+@media (min-width: 1900px) {
+    .container {
+        max-width: 1805px;
+    }
+}

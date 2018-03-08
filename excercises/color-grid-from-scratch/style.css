@@ -3,19 +3,22 @@
 *::after {
     box-sizing: border-box;
     font-size: 0px;
-    margin:0;
+    margin: 0;
 }
-body{
+
+body {
     /* height:100vh; */
 }
-.container{
-    position: absolute;
-    width:80%;
-    /* margin:auto; */
+
+.container {
+    width: 100%;
+    margin: auto;
+    /* position: absolute;
     top: 50%;
-    left:50%;
-    transform: translateX(-50%) translateY(-50%) rotate3d(1,1,0,20deg);
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); */
 }
+
 .container div {
     height: 150px;
     display: inline-block;
@@ -43,18 +46,74 @@ body{
     background-color: #E76E34
 }
 
+.container {
+    max-width: 353px;
+}
+
 .all {
     width: 100%;
 }
 
 .threeFourths {
-    width: 75%;
+    width: 100%;
 }
 
 .oneHalf {
-    width: 50%;
+    width: 100%;
 }
 
 .oneQuarter {
-    width: 25%;
+    width: 100%;
+}
+
+@media (min-width:576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .all {
+        width: 100%;
+    }
+    .threeFourths {
+        width: 75%;
+    }
+    .oneHalf {
+        width: 50%;
+    }
+    .oneQuarter {
+        width: 25%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+@media (min-width: 1900px) {
+    .container {
+        max-width: 1805px;
+    }
 }
