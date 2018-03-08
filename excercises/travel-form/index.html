@@ -15,9 +15,9 @@
         <div class="top">
             <h3>Identity</h3>
             <span id="textFields">
-                <input type="text" name="fName" placeholder="Given Name" autocomplete='given-name' />
-                <input type="text" name="lName" placeholder="Family Name" autocomplete='family-name' />
-                <input type="number" name="age" Placeholder="Age" min="0" max="130" />
+                <input type="text" name="fName" placeholder="Given Name" autocomplete='given-name' required />
+                <input type="text" name="lName" placeholder="Family Name" autocomplete='family-name'required  />
+                <input type="number" name="age" Placeholder="Age" min="0" max="130"required />
             </span>
             <label for="male">
                 <input id="male" type="radio" name="gender" value="male"> Male
@@ -32,6 +32,7 @@
         <div>
             <h3>Destination</h3>
             <select name="dest">
+                <option value=null> - </option>
                 <option value="ATL">Atlanta</option>
                 <option value="JFK">New York</option>
                 <option value="SJI">San Jose</option>

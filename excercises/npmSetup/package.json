@@ -1,0 +1,14 @@
+{
+  "name": "npmsetup",
+  "version": "1.0.0",
+  "description": "First attempt at using npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log(\"hello world\")"
+  },
+  "author": "Steven Blakely",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
+}

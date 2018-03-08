@@ -3,7 +3,7 @@ var password = function (howLong) {
     for (var i = 0; i < howLong; i++) {
         var characters = "0123456789~-_=+:;'\"<>,.?/!@#$%^&*()qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
         // var characters = "0123456789";
-        pass += characters.charAt(Math.floor(Math.random() * characters.length))
+        pass+= (characters.charAt(Math.floor(Math.random() * characters.length)));
         // console.log(pass);
     }
 
