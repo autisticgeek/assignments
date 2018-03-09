@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MPC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+    <header>
+        <h1 class="container">Mario Pest Control</h1>
+        <h3 class="container">Move Bowser's cronies to another to castle!</h3>
+    </header>
+    <main>
+        <div class="container">
+            <form name="deezBills" id="deezBills">
+                <label for="goombas">
+                    <figure>
+                        <img src="goomba.png" alr "Goomba">
+                    </figure>
+                    <figcaption>Goombas at 5 Coins</figcaption>
+                    <input name="goombas" id="goombas" type="number" min="0" value="0">
+                    <input type="text" id="goombaCost" class="disabled" disabled value="0">
+                </label>
+                <label for="bobombs">
+                    <figure>
+                        <img src="bobomb.jpg" alr "Bob-omb">
+                    </figure>
+                    <figcaption>Bob-ombs at 7 Coins</figcaption>
+                    <input name="bobombs" id="bobombs" type="number" min="0" value="0">
+                    <input type="text" id="bobCost" class="disabled" disabled value="0">
+                </label>
+                <label for="cheepcheeps">
+                    <figure>
+                        <img src="cheep_cheep.jpg" alr "Cheep Cheep">
+                    </figure>
+                    <figcaption>Cheep-Cheeps at 11 Coins</figcaption>
+                    <input name="cheepcheeps" id="cheepcheeps" type="number" min="0" value="0">
+                    <input type="text" id="cheepCost" class="disabled" disabled value="0">
+                </label>
+                <label>
+                    Total:
+                    <input type="text" id="total" class="disabled" disabled value="0" /> Coins</label>
+
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div>
+                <a href="mailto:mario@nintendo.com">EMAIL ME</a>
+            </div>
+            <address>
+                <span>150 S State Street</span>
+                <span>Salt Lake City, UT 84111</span>
+            </address>
+            <div id="url"></div>
+        </div>
+    </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

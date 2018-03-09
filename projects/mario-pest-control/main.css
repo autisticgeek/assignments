@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0
+}
+
+body {
+    min-height: 100vh;
+}
+
+header {}
+
+header .container {
+    width: 90%;
+    text-align: center;
+}
+
+main .container {
+    width: 90%;
+}
+
+header,
+footer {
+    background-color: firebrick;
+    color: whitesmoke;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+footer .container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+footer .container a {
+    color: whitesmoke
+}
+
+footer .container>* {
+    text-align: center;
+    width: 300px;
+}
+
+#deezBills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+
+label {
+    display: inline-block;
+    min-width: 300px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+label input {
+    display: block;
+    border: firebrick thin solid;
+    margin: auto;
+}
+
+#total {
+    text-align: center;
+    font-weight: bold;
+    font-size: 5rem;
+    width: 100%;
+}
+
+.container {
+    margin: auto;
+}
+
+.disabled {
+    text-align: end;
+    border: none;
+}
+
+address span {
+    display: block;
+    font-style: normal;
+}
