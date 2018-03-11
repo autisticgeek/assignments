@@ -1,5 +1,5 @@
 var form = document.getElementsByTagName('form')[0];
-var fName = document.getElementsByName("fName")[0];
+var fName = document.getElementsByName("fName");
 var lName = document.getElementsByName("lName")[0];
 var age = document.getElementsByName("age")[0];
 var gender = document.getElementsByName("gender")[0];
@@ -42,7 +42,7 @@ var submitForm = function (event) {
 }
 
 
-document.getElementsByName("fName")[0].addEventListener("input", givenName);
+fName[0].addEventListener("input", givenName);
 document.getElementsByName("lName")[0].addEventListener("input", familyName);
 document.getElementsByName("age")[0].addEventListener("input", age);
 document.getElementsByName("gender")[0].addEventListener("change", gender);
