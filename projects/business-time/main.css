@@ -13,7 +13,7 @@
 }
 
 nav {
-    background: linear-gradient(darkblue, skyblue);
+    background: linear-gradient(darkblue, #56C6F4);
 }
 
 nav .brand {
@@ -35,10 +35,7 @@ nav .container {
 }
 
 nav .container ul {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: space-around
+    display: none;
 }
 
 nav .container ul li {
@@ -48,9 +45,9 @@ nav .container ul li {
     white-space: nowrap;
 }
 
-nav .container ul li:hover, nav .container ul li:active {
-    background: linear-gradient(darkblue, skyblue);
-    
+nav .container ul li:hover,
+nav .container ul li:active {
+    background: linear-gradient(darkblue, #56C6F4);
 }
 
 nav .container ul li a {
@@ -58,43 +55,88 @@ nav .container ul li a {
     padding: 1em 1em;
 }
 
-
 nav .container .icon {
-    display: none;
+    display: block;
 }
 
 header {
-    background: skyblue;
+    color: whitesmoke;
 }
-#fiji1{
+
+#fiji1 {
     background-image: url("./fiji-para.jpg");
-    height: 400px;
- }
- #fiji2{
+    height: 500px;
+}
+
+#fiji2 {
     background-image: url("./fiji2.jpg");
-    height: 300px;
-    
- }
+    height: 400px;
+}
+
+#hawaii1 {
+    background-image: url("./hawaii1.jpg");
+    height: 500px;
+}
+
+#hawaii2 {
+    background-image: url("./hawaii2.jpg");
+    height: 400px;
+}
+
+#tonga1 {
+    background-image: url("./tonga1.jpg");
+    height: 500px;
+}
+
+#tonga2 {
+    background-image: url("./tonga2.jpg");
+    height: 400px;
+}
+
+#tahiti1 {
+    background-image: url("./tahiti1.jpg");
+    height: 500px;
+}
+
+#tahiti2 {
+    background-image: url("./tahiti2.jpg");
+    height: 400px;
+}
+
+#somoa1 {
+    background-image: url("./somoa1.jpg");
+    height: 500px;
+}
+
+#somoa2 {
+    background-image: url("./somoa2.jpg");
+    height: 400px;
+}
+
 .para {
     background-attachment: fixed;
-    /* background-position: center; */
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 }
- 
 
 header .container {
     flex-direction: column;
+    justify-content: flex-end;
+    align-items: center
+}
+
+header h1 {
+    font-size: 10vw;
 }
 
 main {
-    background-color: skyblue;
+    background-color: #56C6F4;
 }
 
 main .container {
     flex-direction: column;
-    padding-top:2em;
-    
+    padding-top: 2em;
 }
 
 main .container p {
@@ -102,10 +144,25 @@ main .container p {
 }
 
 footer {
-    background: linear-gradient(#0077be, #c2b280);
+    background: linear-gradient(#56C6F4, #BFC1C2);
     padding-top: 5em
 }
 
 footer .container {
     flex-direction: row;
+}
+
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 20vw;
+    }
+    nav .container ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        justify-content: space-around
+    }
+    nav .container .icon {
+        display: none;
+    }
 }

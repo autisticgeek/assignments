@@ -1,39 +1,39 @@
 var ask = require("readline-sync");
 
-// // Write a function that takes an array of numbers and returns the largest (without using Math.max())
-// var highestNum = function (arr) {
+// Write a function that takes an array of numbers and returns the largest (without using Math.max())
+var highestNum = function (arr) {
 
-//     var highest = arr[0];
-//     for (var i = 0; i < arr.length; i++) {
-//         if (highest < arr[i]) {
-//             highest = arr[i];
-//         }
-//     }
-//     return highest;
-// }
-// var numArray = ask.question("\n\nGive me your numbers seperated by commas.\n").replace(/\s/g, '').split(",");
-// console.log(highestNum(numArray));
+    var highest = arr[0];
+    for (var i = 0; i < arr.length; i++) {
+        if (highest < arr[i]) {
+            highest = arr[i];
+        }
+    }
+    return highest;
+}
+var numArray = ask.question("\n\nGive me your numbers seperated by commas.\n").replace(/\s/g, '').split(",");
+console.log(highestNum(numArray));
 
 
-// // Write a function that takes an array of words and a character and return each word that has that letter present.
+// Write a function that takes an array of words and a character and return each word that has that letter present.
 
-// var checkArrayForLetter = function (arr, c) {
-//     var data = "";
-//     for (var i = 0; i < arr.length; i++) {
-//         if (arr[i].includes(c)) {
-//             data += `${arr[i]} `;
-//         }
-//     }
-//     if (data === "") {
-//         data = `I did not find the letter ${c} in these words\n`;
-//     } else {
-//         data = `I found: ${data}\n`;
-//     }
-//     return data
-// }
-// var c = ask.question("\n\nWhat letter do you want me to look for?\n")
-// var wordArray = ask.question(`\nWhat words would you like me to check for the letter ${c} \nPlease seperate by spaces\n`).split(" ");
-// console.log(checkArrayForLetter(wordArray, c));
+var checkArrayForLetter = function (arr, c) {
+    var data = "";
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i].includes(c)) {
+            data += `${arr[i]} `;
+        }
+    }
+    if (data === "") {
+        data = `I did not find the letter ${c} in these words\n`;
+    } else {
+        data = `I found: ${data}\n`;
+    }
+    return data
+}
+var c = ask.question("\n\nWhat letter do you want me to look for?\n")
+var wordArray = ask.question(`\nWhat words would you like me to check for the letter ${c} \nPlease seperate by spaces\n`).split(" ");
+console.log(checkArrayForLetter(wordArray, c));
 
 
 // Write a function that takes a num1 and num2 and returns whether num1 is divisible by num2.
