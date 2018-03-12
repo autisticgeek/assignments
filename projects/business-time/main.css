@@ -1,0 +1,111 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    width: 87vw;
+    margin: auto;
+    display: flex;
+    font-family: 'Muli';
+}
+
+nav {
+    background: linear-gradient(darkblue, skyblue);
+}
+
+nav .brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .container a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+nav .container {
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1em;
+}
+
+nav .container ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around
+}
+
+nav .container ul li {
+    padding: 0px;
+    margin: 5px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+nav .container ul li:hover, nav .container ul li:active {
+    background: linear-gradient(darkblue, skyblue);
+    
+}
+
+nav .container ul li a {
+    display: block;
+    padding: 1em 1em;
+}
+
+
+nav .container .icon {
+    display: none;
+}
+
+header {
+    background: skyblue;
+}
+#fiji1{
+    background-image: url("./fiji-para.jpg");
+    height: 400px;
+ }
+ #fiji2{
+    background-image: url("./fiji2.jpg");
+    height: 300px;
+    
+ }
+.para {
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ 
+
+header .container {
+    flex-direction: column;
+}
+
+main {
+    background-color: skyblue;
+}
+
+main .container {
+    flex-direction: column;
+    padding-top:2em;
+    
+}
+
+main .container p {
+    margin-bottom: 1em;
+}
+
+footer {
+    background: linear-gradient(#0077be, #c2b280);
+    padding-top: 5em
+}
+
+footer .container {
+    flex-direction: row;
+}
