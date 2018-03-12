@@ -1,0 +1,23 @@
+{
+  "name": "stuck-debug",
+  "version": "1.0.0",
+  "description": "This program should have the user:",
+  "main": "app.js",
+  "dependencies": {
+    "readline-sync": "^1.4.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VSchool/stuck-debug.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VSchool/stuck-debug/issues"
+  },
+  "homepage": "https://github.com/VSchool/stuck-debug#readme"
+}

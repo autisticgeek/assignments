@@ -75,12 +75,12 @@ header {
 
 #hawaii1 {
     background-image: url("./hawaii1.jpg");
-    height: 500px;
+    height: 300px;
 }
 
 #hawaii2 {
     background-image: url("./hawaii2.jpg");
-    height: 400px;
+    height: 300px;
 }
 
 #tonga1 {
@@ -127,7 +127,7 @@ header .container {
 }
 
 header h1 {
-    font-size: 10vw;
+    font-size: 20vw;
 }
 
 main {
@@ -144,8 +144,9 @@ main .container p {
 }
 
 footer {
-    background: linear-gradient(#56C6F4, #BFC1C2);
-    padding-top: 5em
+    background: linear-gradient(#56C6F4, #e1d9c7);
+    padding-top: 5em;
+    padding-bottom:1em;
 }
 
 footer .container {
@@ -153,9 +154,6 @@ footer .container {
 }
 
 @media (min-width: 768px) {
-    header h1 {
-        font-size: 20vw;
-    }
     nav .container ul {
         display: flex;
         flex-direction: row;
@@ -164,5 +162,11 @@ footer .container {
     }
     nav .container .icon {
         display: none;
+    }
+    #hawaii1 {
+        height: 500px;
+    }
+    #hawaii2 {
+        height: 400px;
     }
 }
