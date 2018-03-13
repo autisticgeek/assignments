@@ -1,4 +1,4 @@
-data = {};
+var data = {};
 var countInstanceInString = function (str) {
     var sorted = [];
     for (var i = 0; i < str.length; i++) {
@@ -9,7 +9,6 @@ var countInstanceInString = function (str) {
             data[c] = 1;
         }
     }
-
     // OPTIONAL SORT
     for (var letter in data) {
         sorted.push([letter, data[letter]])
@@ -20,5 +19,5 @@ var countInstanceInString = function (str) {
     return sorted;
 }
 
-var phrase = 'Show me the money!';
+var phrase = 'The quick brown fox jumps over the lazy dog';
 console.log(countInstanceInString(phrase));
