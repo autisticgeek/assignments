@@ -1,0 +1,27 @@
+.box {
+
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border: solid black 1px;
+
+}
+
+.number {
+  position: absolute;
+  font-size: 30px;
+  font-family: sans-serif;
+  padding: 20px;
+  left: 100px;
+
+}
+
+.long {
+  top: 100px;
+  width: 3000px;
+}
+
+.tall {
+  left: 100px;
+  height: 3000px;
+}
