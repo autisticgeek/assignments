@@ -8,17 +8,17 @@ var cheepCost = document.getElementById("cheepCost");
 var totalCost = document.getElementById("total");
 
 var setGoomba = function (event) {
-    data.goombas = parseInt(event.target.value);
+    data.goombas = event.target.value;
     goombaCost.value = data.goombas * 5;
     setTotal();
 }
 var setBob = function (event) {
-    data.bobs = parseInt(event.target.value);
+    data.bobs = event.target.value;
     bobCost.value = data.bobs * 7;
     setTotal();
 }
 var setCheep = function (event) {
-    data.cheeps = parseInt(event.target.value);
+    data.cheeps = event.target.value;
     cheepCost.value = data.cheeps * 11;
     setTotal();
 }
