@@ -3,6 +3,7 @@
 *:after {
     box-sizing: border-box;
     margin: 0;
+   
 }
 
 .container {
@@ -43,11 +44,20 @@ nav .container ul li {
     margin: 5px;
     border-radius: 10px;
     white-space: nowrap;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
 }
 
 nav .container ul li:hover,
 nav .container ul li:active {
-    background: linear-gradient(darkblue, #56C6F4);
+    /* background: linear-gradient(darkblue, #56C6F4); */
+    background-color: darkblue;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    
+
 }
 
 nav .container ul li a {
