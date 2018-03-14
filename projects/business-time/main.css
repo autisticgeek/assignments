@@ -62,6 +62,16 @@ nav .container .icon {
 header {
     color: whitesmoke;
 }
+#index1 {
+    background-image: url("./index1.jpg");
+    height: 500px;
+}
+
+#index2 {
+    background-image: url("./fiji2.jpg");
+    height: 400px;
+}
+
 
 #fiji1 {
     background-image: url("./fiji-para.jpg");
