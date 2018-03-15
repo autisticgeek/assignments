@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.row div {
+    border: thick solid black;
+    width: 25vw;
+    height: 30vh;
+    border-radius: 10%;
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: 0.5s;
+}
+
+.row div:hover {
+    border: thin solid black;
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: 0.3s;
+    width: 28vw;
+    height: 33vh;
+}
+
+.one {
+    background-color: rgba(255, 0, 0, 0.3)
+}
+
+.one:hover {
+    background-color: rgba(255, 0, 0, 1)
+}
+
+.two {
+    background-color: rgba(0, 255, 0, 0.3)
+}
+
+.two:hover {
+    background-color: rgba(0, 255, 0, 1)
+}
+
+.three {
+    background-color: rgba(0, 0, 255, 0.3)
+}
+
+.three:hover {
+    background-color: rgba(0, 0, 255, 1)
+}
+
+.four {
+    background-color: rgba(255, 255, 0, 0.3);
+}
+
+.four:hover {
+    background-color: rgba(255, 255, 0, 1);
+}
+
+.five {
+    background-color: rgba(0, 255, 255, 0.3);
+}
+
+.five:hover {
+    background-color: rgba(0, 255, 255, 1);
+}
+
+.six {
+    background-color: rgba(255, 0, 255, 0.3);
+}
+
+.six:hover {
+    background-color: rgba(255, 0, 255, 1);
+}
