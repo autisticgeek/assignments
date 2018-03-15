@@ -22,8 +22,9 @@ Enemy.prototype.genHitPoints = function (type) {
 }
 
 function createEnemies(num) {
+    var data=[];
     for (var i = 0; i < num; i++) {
         console.log(new Enemy());
     }
-}
-createEnemies(10);
+    return data;
+};
