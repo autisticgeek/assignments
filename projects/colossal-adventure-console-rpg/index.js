@@ -1,9 +1,19 @@
 var ask = require("readline-sync");
 var numEnemys = 6;
-var data = {};
-data.enemys = createEnemies(numEnemys);
-data.player.enemysKilled = 0;
-data.player.hitPoints = 100;
+var initialHitPoints = 100;
+
+
+
+console.log('\033c')
+var greet = "Greetings travler…\nWelcome to the country of Smalland.\n\nWhat shall we call you?\n\t";
+var name = ask.question(greet);
+
+function Player(player) {
+    this.name = player;
+    this.hitpoints = initialHitPoints;
+    this.enemysKilled = 0;
+}
+player = new Player(name);
 
 var Enemy = function () {
     this.type = getRandomType();
@@ -27,57 +37,55 @@ Enemy.prototype.genHitPoints = function (type) {
             return Math.floor(Math.random() * 30) + 20;
     }
 }
+var enemys = [];
+for (var i = 0; i < numEnemys; i++) {
+    enemys.push(new Enemy);
+}
 
-function createEnemies(num) {
-    for (var i = 0; i < num; i++) {
-        console.log(new Enemy);
+var quit = function () {
+    console.log(`\nQUIT\n`);
+    player.hitpoints = 0;
+}
+
+var explore = function () {
+    console.log(`\nwalking about…\n`);
+    if (Math.random > 0.75) {
+        console.log(`\nYou Found an ememy and killed it!\n`);
+        player.enemysKilled++;
+        console.log(player.enemysKilled);
     }
 }
 
-function quit() {
-    player.hitPoints = 0;
-}
+console.log('\033c')
+var forceOut = 0;
+while (player.enemysKilled != enemys.length && player.hitpoints >= 1 && forceOut != 20) {
 
-function explore() {
-    console.log(`walking about`);
-}
-
-
-
-var greet = "\n\nGreetings travler…\nWelcome to the country of Smalland.\n\nWhat shall we call you?\n\t";
-var playerName = ask.question(greet);
-data.player.name = playerName;
-
-
-
-
-while (data.player.hitPoints > 0 || data.player.enemysKilled >= numEnemys) {
-    var action = ask.question(`Well ${data.player.name}… What do you want to do?\n\tExplore\n\tQuit`);
+    
+    console.log(`${player.name}\t Life : ${player.hitpoints}\tPOINTS : ${player.enemysKilled}`);
+    var action = ask.question(`What do you want to do?\n\t(E)xplore\n\t(Q)uit\n\t`);
     switch (action) {
-        case q:
+        case "q":
             quit();
             break;
-        case Q:
+        case "Q":
             quit();
             break;
-        case e:
+        case "e":
             explore();
             break;
-        case E:
+        case "E":
             explore();
             break;
     }
+    console.log('\033c')
+    forceOut++;
 
 }
 var outcome;
-if (data.player.hitPoints <= 0) {
-    outcome = `Wat!`
+if (player.hitpoints < 1) {
+    outcome = `Wat! ${player.name} is now a crispy corpse!\n\n\n\n\n\n\n`
 }
-if (data.player.enemysKilled >= numEnemys) {
-    outcome = `You killed them all!  Someone call the ASPCA!`
+if (player.enemysKilled === enemys.length) {
+    outcome = `You killed them all!  Someone call the ASPCA!\n\n\n\n\n\n\n`
 }
 console.log(outcome);
-
-
-
-console.log(data);
