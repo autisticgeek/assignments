@@ -1,0 +1,13 @@
+{
+    "title": {
+        "message": "Path `title` is required.",
+        "name": "ValidatorError",
+        "properties": {
+            "type": "required",
+            "message": "Path `{PATH}` is required.",
+            "path": "title"
+        },
+        "kind": "required",
+        "path": "title"
+    }
+}
