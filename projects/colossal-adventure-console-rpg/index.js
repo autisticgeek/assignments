@@ -49,19 +49,27 @@ var quit = function () {
 
 var explore = function () {
     console.log(`\nwalking about…\n`);
-    if (Math.random > 0.75) {
+    if (Math.random() > 0.5) {
         console.log(`\nYou Found an ememy and killed it!\n`);
         player.enemysKilled++;
         console.log(player.enemysKilled);
     }
 }
 
-console.log('\033c')
-var forceOut = 0;
-while (player.enemysKilled != enemys.length && player.hitpoints >= 1 && forceOut != 20) {
+
+while (player.enemysKilled != enemys.length && player.hitpoints >= 1) {
 
     
-    console.log(`${player.name}\t Life : ${player.hitpoints}\tPOINTS : ${player.enemysKilled}`);
+    console.log(`\u2500`);
+    var statusBar = `${player.name}\t Life : ${player.hitpoints}\tPOINTS : ${player.enemysKilled}`
+    console.log(statusBar);
+    var underline=[];
+    for(var i=0;i<statusBar.length;i++){
+        undefined.push('\u2500')
+    }
+    console.log(underline.join(''))
+    
+    
     var action = ask.question(`What do you want to do?\n\t(E)xplore\n\t(Q)uit\n\t`);
     switch (action) {
         case "q":
@@ -78,7 +86,7 @@ while (player.enemysKilled != enemys.length && player.hitpoints >= 1 && forceOut
             break;
     }
     console.log('\033c')
-    forceOut++;
+    
 
 }
 var outcome;
