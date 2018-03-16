@@ -38,7 +38,10 @@ var food = function (event) {
 }
 var submitForm = function (event) {
     event.preventDefault();
-    alert("Name: "+data.givenName+" "+(data.familyName)+"\nAge: "+data.age+"\nGender: "+data.gender+"\nDestination: "+data.dest+"\nFood Prefrence: "+ data.food.join(", "));
+
+
+    alert(`Name: ${data.givenName} ${(data.familyName)}\nAge: ${data.age}\nGender: ${data.gender}\nDestination: ${data.dest}\nFood Prefrence: ${ data.food.join(", ")}`);
+
 }
 
 
