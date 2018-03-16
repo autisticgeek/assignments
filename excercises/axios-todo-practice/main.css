@@ -1,0 +1,6 @@
+#list{
+    border: thin solid black;
+}
+form label{
+    display: block;
+}
