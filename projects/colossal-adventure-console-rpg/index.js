@@ -43,6 +43,27 @@ for (var i = 0; i < numEnemys; i++) {
     enemys.push(new Enemy);
 }
 
+
+var dragon = function () {
+    var drg = `
+    ,   ,
+    $,  $,     ,
+    "ss.$ss. .s'
+      .ss$$$$$$$$$$s,
+   s$$$$$$$$$$$$$$\`$$Ss
+"$$$$$$$$$$$$$$$$$$o$$$       ,
+s$$$$$$$$$$$$$$$$$$$$$$$$s,  ,s
+s$$$$$$$$$"$$$$$$""""$$$$$$"$$$$$,
+s$$$$$$$$$$s""$$$$ssssss"$$$$$$$$"
+s$$$$$$$$$$'         \`"""ss"$"$s""
+s$$$$$$$$$$,              \`"""""$  .s$$s
+s$$$$$$$$$$$$s,...               \`s$$'  \`
+
+    `;
+    return console.log(drg);
+}
+
+
 var quit = function () {
     console.log('\033c');
     console.log(`\nQUIT\n`);
@@ -58,9 +79,17 @@ var explore = function () {
     console.log(statusBar);
     console.log(underline.join(''))
     console.log(`\nYou travel ${direction} for a time…\n`);
+
     if (Math.random() > 0.50) {
-        console.log(`\nYou found an ememy and killed it!\n`);
+
         player.enemysKilled++;
+        switch (enemys[player.enemysKilled-1].type) {
+            case 'Ancient Dragon':
+                dragon();
+                console.log(`\nYou found an "Ancient Dragon" and killed it!\n`);
+                break;
+        }
+
     } else {
         console.log(`\nYou find nothing significant.\n`);
     }
@@ -108,7 +137,7 @@ while (player.enemysKilled != enemys.length && player.hitpoints >= 1) {
 }
 var outcome;
 if (player.hitpoints < 1) {
-    outcome = "\033c"+`\nWat! ${player.name} is now a crispy corpse!\n\n\n\n\n\n\n`
+    outcome = "\033c" + `\nWat! ${player.name} is now a crispy corpse!\n\n\n\n\n\n\n`
 }
 if (player.enemysKilled === enemys.length) {
     outcome = "\033c\nYou killed them all!  Someone call the ASPCA!\n\n\n\n\n\n\n"
