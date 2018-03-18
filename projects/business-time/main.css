@@ -3,7 +3,6 @@
 *:after {
     box-sizing: border-box;
     margin: 0;
-   
 }
 
 .container {
@@ -14,74 +13,85 @@
 }
 
 nav {
-    background: linear-gradient(darkblue, #56C6F4);
-}
-
-nav .brand {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-nav .container a {
-    color: whitesmoke;
-    text-decoration: none;
+    background: linear-gradient(darkblue, #56C6F4)
 }
 
 nav .container {
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav .container .brand {
+    display: block;
+    justify-content: center;
+    /* padding:0.5em; */
 }
 
 nav .container ul {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    list-style: none outside none;
+    padding-left: 0px;
+    justify-content: center;
 }
 
-nav .container ul li {
-    padding: 0px;
-    margin: 5px;
+nav .container ul li {}
+
+nav .container a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
     border-radius: 10px;
-    white-space: nowrap;
-    transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: linear;
+    padding: 0.5em;
+    text-align: center;
+    margin-top: 0.2em;
+    color: whitesmoke;
 }
 
-nav .container ul li:hover,
-nav .container ul li:active {
-    /* background: linear-gradient(darkblue, #56C6F4); */
-    background-color: darkblue;
-    transition-property: all;
-    transition-duration: 1s;
-    transition-timing-function: linear;
-    
-
+nav .container ul li a:hover {
+    background-color: gray;
+    transition-duration: 1.5s
 }
 
-nav .container ul li a {
-    display: block;
-    padding: 1em 1em;
-}
-
-nav .container .icon {
-    display: block;
+@media (min-width:712px) {
+    nav .container {
+        flex-direction: row;
+        align-items: center
+    }
+    nav .container .brand {
+        flex: 1;
+    }
+    nav .container ul {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex: 4;
+        justify-content: flex-end;
+    }
+    nav .container ul li {
+        margin-left: 1em;
+    }
+    nav .container ul li a {
+        padding: 0.5em;
+        font-size: 1.5rem;
+        transition-duration: 1s;
+    }
 }
 
 header {
     color: whitesmoke;
 }
+
 #index1 {
     background-image: url("./index1.jpg");
     height: 500px;
 }
 
-#index2 {
+
+/* #index2 {
     background-image: url("./fiji2.jpg");
     height: 400px;
-}
-
+} */
 
 #fiji1 {
     background-image: url("./fiji-para.jpg");
@@ -95,12 +105,12 @@ header {
 
 #hawaii1 {
     background-image: url("./hawaii1.jpg");
-    height: 300px;
+    height: 500px;
 }
 
 #hawaii2 {
     background-image: url("./hawaii2.jpg");
-    height: 300px;
+    height: 400px;
 }
 
 #tonga1 {
@@ -166,11 +176,28 @@ main .container p {
 footer {
     background: linear-gradient(#56C6F4, #e1d9c7);
     padding-top: 5em;
-    padding-bottom:1em;
+    padding-bottom: 1em;
 }
 
 footer .container {
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .container>div {
+    flex: 1 1 auto;
+    justify-content: space-around;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0px
+}
+main .container {
+    display: flex;
+
 }
 
 @media (min-width: 768px) {
@@ -178,15 +205,9 @@ footer .container {
         display: flex;
         flex-direction: row;
         list-style-type: none;
-        justify-content: space-around
+        
     }
     nav .container .icon {
         display: none;
-    }
-    #hawaii1 {
-        height: 500px;
-    }
-    #hawaii2 {
-        height: 400px;
     }
 }
