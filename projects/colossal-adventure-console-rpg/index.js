@@ -12,8 +12,12 @@ function Player(player) {
     this.name = player;
     this.hitpoints = initialHitPoints;
     this.enemysKilled = 0;
+    this.chichen = 0;
     this.turns = 0;
 }
+Player.prototype.enemyNum = function() {
+    return this.enemysKilled + this.chicken;
+};
 player = new Player(name);
 
 var Enemy = function () {
@@ -23,7 +27,7 @@ var Enemy = function () {
 }
 
 function getRandomType() {
-    var enemyTypes = ["Ancient Dragon", "Panther", "Mighty Grunt"];
+    var enemyTypes = ["Ancient Dragon", "Panther", "Cobra"];
     var randIndex = Math.floor(Math.random() * enemyTypes.length);
     return enemyTypes[randIndex];
 }
@@ -34,7 +38,7 @@ Enemy.prototype.genHitPoints = function (type) {
             return Math.floor(Math.random() * 21) + 80;
         case "Panther":
             return Math.floor(Math.random() * 30) + 50;
-        case "Mighty Grunt":
+        case "Cobra":
             return Math.floor(Math.random() * 30) + 20;
     }
 }
@@ -42,8 +46,10 @@ var enemys = [];
 for (var i = 0; i < numEnemys; i++) {
     enemys.push(new Enemy);
 }
-function panther(){
-var panther = `                         ..,co88oc.oo8888cc,..
+
+function panther() {
+    var panther = `
+                             ..,co88oc.oo8888cc,..
 o8o.               ..,o8889689ooo888o"88888888oooc..
 .88888             .o888896888".88888888o'?888888888889ooo....
 a888P          ..c6888969""..,"o888888888o.?8888888888"".ooo8888oo.
@@ -65,7 +71,8 @@ a888P          ..c6888969""..,"o888888888o.?8888888888"".ooo8888oo.
                                                                   "888889,
                                                            . : :.:::::::.: :.
 `;
-return console.log(panther);}
+    return console.log(panther);
+}
 
 
 var dragon = function () {
@@ -86,7 +93,27 @@ s$$$$$$$$$$$$s,...               \`s$$'  \`
     `;
     return console.log(drg);
 }
-var fight = function()
+var cobra = function () {
+    var cob = `
+     _________         _________
+    /         \\       /         \\   
+   /  /~~~~~\\  \\     /  /~~~~~\\  \\  
+   |  |     |  |     |  |     |  |
+   |  |     |  |     |  |     |  |
+   |  |     |  |     |  |     |  |         /
+   |  |     |  |     |  |     |  |       //
+  (o  o)    \\  \\_____/  /     \\  \\_____/ /
+   \\__/      \\         /       \\        /
+    |         ~~~~~~~~~         ~~~~~~~~
+    ^
+    `;
+    return console.log(cob);
+}
+
+var fight = function () {
+    console.log(enemys[player.enemysKilled]);
+
+}
 
 
 var quit = function () {
@@ -104,18 +131,25 @@ var explore = function () {
     console.log(statusBar);
     console.log(underline.join(''))
     console.log(`\nYou travel ${direction} for a time…\n`);
+    console.log(player);
+    
+
 
     if (Math.random() > 0.50) {
 
-        
-        switch (enemys[player.enemysKilled-1].type) {
+
+        switch (enemys[player.enemysKilled].type) {
             case 'Ancient Dragon':
                 dragon();
                 console.log(`\nYou found an dragon and killed it!\n`);
                 break;
-                case 'Panther':
+            case 'Panther':
                 panther();
                 console.log(`\nYou found a panther and killed it!\n`);
+                break;
+            case 'Cobra':
+                cobra();
+                console.log(`\nYou found a cobra and killed it!\n`);
                 break;
         }
         player.enemysKilled++;
@@ -123,11 +157,8 @@ var explore = function () {
     } else {
         console.log(`\nYou find nothing significant.\n`);
     }
-    action = ask.question(`\nWhat do you want to do now?\n\nPrees q to quit\n[ENTER] or [RETURN] to continue`);
-    // require('child_process').spawnSync("read _ ", {
-    //     shell: true,
-    //     stdio: [0, 1, 2]
-    // });
+    action = ask.keyIn(`\nWhat do you want to do now?\n\nE̲xplore\nQ̲uit`);
+
 }
 
 console.log('\033c')
@@ -138,10 +169,10 @@ for (var i = 0; i < statusBar.length; i++) {
 }
 console.log(statusBar);
 console.log(underline.join(''))
-var action = ask.question(`What do you want to do?\nPrees q to quit\n[ENTER] or [RETURN] to continue`);
+var action = ask.keyIn(`What do you want to do?\nE̲xplore\nQ̲uit`);
 while (player.enemysKilled != enemys.length && player.hitpoints >= 1) {
 
-
+    
 
 
     switch (action) {
@@ -150,6 +181,12 @@ while (player.enemysKilled != enemys.length && player.hitpoints >= 1) {
             break;
         case "Q":
             quit();
+            break;
+        case "w":
+            explore();
+            break;
+        case "W":
+            explore();
             break;
         case "e":
             explore();
