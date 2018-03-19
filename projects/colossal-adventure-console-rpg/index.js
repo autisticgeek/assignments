@@ -86,6 +86,7 @@ s$$$$$$$$$$$$s,...               \`s$$'  \`
     `;
     return console.log(drg);
 }
+var fight = function()
 
 
 var quit = function () {
@@ -106,7 +107,7 @@ var explore = function () {
 
     if (Math.random() > 0.50) {
 
-        player.enemysKilled++;
+        
         switch (enemys[player.enemysKilled-1].type) {
             case 'Ancient Dragon':
                 dragon();
@@ -117,6 +118,7 @@ var explore = function () {
                 console.log(`\nYou found a panther and killed it!\n`);
                 break;
         }
+        player.enemysKilled++;
 
     } else {
         console.log(`\nYou find nothing significant.\n`);
