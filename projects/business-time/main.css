@@ -172,8 +172,10 @@ main .container {
 }
 
 main .container section {
-    grid-column-start: 1;
-    grid-column-end: 6;
+    text-align: justify;
+}
+main .container aside{
+    text-align: justify;
 }
 
 main .container p {
@@ -218,6 +220,10 @@ footer ul {
     }
     main .container section {
         grid-column-start: 1;
+        grid-column-end: 6;
+    }
+    main .container aside{
+        grid-column-start: 6;
         grid-column-end: 6;
     }
     footer .container {
