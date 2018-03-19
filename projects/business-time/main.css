@@ -219,12 +219,8 @@ footer ul {
         padding-top: 2em;
     }
     main .container section {
-        /* grid-column-start: 1;
-        grid-column-end: 6; */
     }
     main .container aside{
-        /* grid-column-start: 6;
-        grid-column-end: 6; */
     }
     footer .container {
         display: grid;
