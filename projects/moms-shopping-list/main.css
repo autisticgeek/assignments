@@ -1,0 +1,37 @@
+.container {
+    width: 90vw;
+    margin: auto;
+    padding-bottom: 2em
+}
+header h1{
+    text-align: center;
+}
+form {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: 30px;
+}
+
+form label {
+    text-align: end;
+}
+
+form button {
+    border: none;
+    width: 25px;
+}
+
+form label div {
+    text-align: right;
+}
+
+ol {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+ol li button {
+    border: none;
+    font-size: 1.5em;
+}
