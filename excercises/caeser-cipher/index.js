@@ -1,7 +1,7 @@
 var ask = require("readline-sync");
 var caeserShift = function (str, num) {
     var data = "";
-    var alpfa = "abcdefghijklmnopqrstuvwxyz".split('');
+   // var alpfa = "abcdefghijklmnopqrstuvwxyz".split('');
 
     for (var i = 0; i < str.length; i++) {
         var c
@@ -21,6 +21,5 @@ var caeserShift = function (str, num) {
 }
 var input = ask.question('\nWhat phrase would you like to encrypt?\n').toLowerCase();  
 var shift = parseInt(ask.question('\nHow many letters would you like to shift?\n')); 
-// var input = "hi there";
-// var shift = 15;
+
 console.log(caeserShift(input, shift))
