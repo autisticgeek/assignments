@@ -1,174 +1,147 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <title>BLOG</title>
+  <head>
+    <title>HOME</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-novkfxI48G9YvcamVHf01KL+Sm6JFherxeJKqUdbez8EoEsAued2k/cD43lYG+B1"
-        crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-        crossorigin="anonymous">
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-        crossorigin="anonymous"></script>
-
-</head>
-
-<body>
+    <!-- Bootstrap CSS and Font Awesome-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-novkfxI48G9YvcamVHf01KL+Sm6JFherxeJKqUdbez8EoEsAued2k/cD43lYG+B1" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+  
+  <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
-        <div class="container">
-            <a class="navbar-brand" href=".">Autisticgeek</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="fa fa-bars" aria-hidden="true"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href=".">
-                            <i class="fa fa-home fa-lg" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="users.php">
-                            <i class="fa fa-users fa-lg" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                </ul>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn>" data-toggle="modal" data-target=".bs-modal-md">Login</button>
-                <!-- Modal -->
-                <div class="modal fade bs-modal-md" id="myModal" tabindex="-1" role="dialog" aria-labelledby="Login Prompt" aria-hidden="true">
-                    <div class="modal-dialog modal-md">
-                        <div class="modal-content">
-                            <form class="form-signin">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Please sign in</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <label for="inputEmail" class="sr-only">Email address</label>
-                                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="email" required autofocus>
-                                    <label for="inputPassword" class="sr-only">Password</label>
-                                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="passwd" required autocomplete="off">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" value="1" name="rm"> Remember me for 30 days.
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <input type="submit" value="GO" class="btn btn-primary" />
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </div>
-                            </form>
-                        </div>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Autisticgeek</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fa fa-bars" aria-hidden="true"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="realcode.html"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item"></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-external-link fa-lg"></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://jacobhaug.com/"><img src="JH.png" /> Jacob Haug</a>
+                <a class="dropdown-item" href="https://www.linkedin.com/in/richard-whitmarsh-70/"><i class="fa fa-linkedin-square" title="LinkedIN"></i> Richard Whitmarsh</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://www.openwest.org/"><img src="openwest.png" /> OpenWest</a>
+                <a class="dropdown-item" href="https://saintcon.org/"><img src="SaintCon.png" /> SAINTCON</a>
+                <a class="dropdown-item" href="http://vschool.io/"><img src="VSCHOOL.png"/> <u>V</u> SCHOOL</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://fontawesome.com/"><i class="fa fa-fort-awesome"></i> Font Awesome</a>
+                <a class="dropdown-item" href="https://getbootstrap.com/"><i class="fa fa-bold"></i> &nbsp;Bootstrap</a>
+                
+              </div>
+            </li>
+          </ul>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn" data-toggle="modal" data-target=".bs-modal-md">Login</button>
+          <!-- Modal -->
+          <div class="modal fade bs-modal-md" id="myModal" tabindex="-1" role="dialog" aria-labelledby="Login Prompt" aria-hidden="true">
+            <div class="modal-dialog modal-md">
+              <div class="modal-content">
+                <form action="#" method="post" class="form-signin">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Please sign in</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <label for="inputEmail" class="sr-only">Email address</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="email" required autofocus>
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="passwd" required autocomplete="off">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="1" name="rm"> Remember me for 30 days.
+                      </label>
                     </div>
-                </div>
-
-
+                  </div>
+                  <div class="modal-footer">
+                    <input type="submit" value="GO" class="btn btn-primary" />
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </form>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
     </nav>
     <div class="container">
-        <div class="row">
-            <main class="col-md-10">
-                <!-- Content area -->
-
-
-                <article>
-                    <h2>article title</h2>
-                    <div>
-                        <strong>Geek — 20 March 2018</strong>
-                    </div>
-                    <img src="./Mississsippi River Sunset.jpg_large" class="col-md-12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero aspernatur animi inventore, facilis
-                        tenetur minima facere, veritatis nisi dolores quod tempora modi, quam dicta rem expedita similique
-                        ad labore ducimus.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae adipisci blanditiis corrupti itaque
-                        nulla neque, vitae, earum recusandae, nobis expedita officia debitis? Eveniet eligendi non consequatur
-                        dolor error? Asperiores, eveniet.</p>
-                </article>
-                <hr/>
-                <article>
-                    <h2>article title</h2>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <strong>Geek — 20 March 2018</strong>
-                        </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero aspernatur animi inventore, facilis
-                        tenetur minima facere, veritatis nisi dolores quod tempora modi, quam dicta rem expedita similique
-                        ad labore ducimus.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae adipisci blanditiis corrupti itaque
-                        nulla neque, vitae, earum recusandae, nobis expedita officia debitis? Eveniet eligendi non consequatur
-                        dolor error? Asperiores, eveniet.</p>
-                </article>
-
-                <hr />
-            </main>
-            <aside>aside content</aside>
+      <div class="row">
+        <div class="col-md-9">
+          <!-- Content area -->
+          <h2>Autonomous vehicles</h2>
+          <div class="row">
+            <div class="col-md-6"><strong>SMB — 31 Jul 2015</strong></div>            
+          </div>
+          <p>I was reading <a href="https://www.reddit.com/r/technology/comments/3f9wjc/google_cars_drive_like_your_grandma_theyre_never">a reddit post recently about autonomous vehicles</a>. The article seemed to indicate that maybe the cars were too cautious. I decided to post a comment. it grew to become a TLDR so I posted only the first two paragraphs and put the full content here. I have a son who will never be able to drive because of a seizure disorder. A self driving car means he will be able to go places without having to depending on the public transit system. Pubic Transit is limited to metropolitan areas. If he, as an independent adult, wanted to travel to a rural area, it would be more inconvenient or costly for him than it would be for others. The sooner these become affordable, the better.</p>
+          
+          <p>His peers will be driving soon, this is the only way I see him having access to the road system at the same level they do. I personally do not know of any laws preventing these cars, but if they exist I can foresee this becoming ADA issue.</p>
+          
+          <p>As for hacking of the SD vehicles, I believe thats a problem we will be facing with non-SD cars very soon anyway. At minimum lets keep a means to manually operating a set of brakes on all vehicles that is mechanical rather than computer assisted. On the SDs have it mechanically disengage the means of continuing to pour fuel or electricity into the motor. Have sensors relay to other vehicles that this &quot;emergency brake&quot; has been activated so they slow down, pass, or stop as necessary, but keep a means to manually stop that can&#39;t be affected by the computer. This way the only hack that we should see is everyone stopped. At which point, you switch to manual by killing the power to the autonomous system until the hack can be fixed. Tragedies will occur, yes. But the ratio of deaths/injuries will go down overall.</p>
+          
+          <p>And in the case of vehicles operated by people like my son; emergency personnel, mechanics, or even ordinary drivers could use a removable steering wheel that could popped into place. The vehicle would only drive a certain distance non-autonomously. This would allow the car to get off the road and if available into a parking lot somewhere close. I&#39;ve seen enough people volunteering to push disabled cars out of the road just so that they could get by easier to know that a running vehicle could be piloted by a volunteer to get it out of the way. Then the vehicle owner could get assistance via cellphone to get the vehicle moved via tow truck if the hack is long term.</p>
+          <p>There a scenario where people who would trigger emergency brakes to stop nearby vehicles on lonely stretches of road for the purpose of doing harm to to the operator. But autonomous vehicles can pass obstructions. This is why I said notify nearby vehicles, so the vehicle would have a heads up to decide what it needed to do. To stop the target vehicle, the obstacle would have to block the whole road. An obstacle that blocks the whole road world be just as effective against our driving current system and how often do you hear of that happening now now?</p>
+          <p>I&#39;d be more concerned with people turning vehicles into autonomous drones to reek havoc than someone taking over my the vehicle if I have the means to engage mechanical brakes that aren&#39;t controlled by the hacked computer.</p>
+          <hr />
+          <h2>When copyright protection goes too far</h2>
+          <div class="row">
+            <div class="col-md-6"><strong>SMB — 30 May 2008</strong></div>
+          </div>
+          <p>The Memorial Day weekend brings an extra day off to most Americans so they can enjoy time with their families, maybe have a barbecue and celebrate the start of summer. This recent Memorial day weekend did just the opposite to employees of <a href="http://www.revision3.com/">Revision3</a>. They were hard at work <a href="http://revision3.com/blog/2008/05/29/inside-the-attack-that-crippled-revision3">combating an attack</a> on their servers.</p>
+          
+          <p>It seams that sometime just before the weekend it was discovered that someone was using Revision3&#39;s bittorrent server to distribute content that did not belong to Revision3. In order to speed up the server Revision3 had the server checking hashes only, not checking weather or not the torrents it was tracking were in fact authorized to be on the server. They of course, upon discovering this, closed the backdoor security hole and purged the illeagly placed torrent tracking files from the server.</p>
+          
+          <p>This is the solution any normal situation would prescribe, because Revision3 would be sued by copyright holders if they did not take action to prevent the known use of Revision3&#39;s servers to distribute copyrighted content not owned by Revision3. This is where it gets interesting. The individuals who were using Revision3&#39;s servers to track the unauthorized torrents had programed their servers to retaliate should they be cut off from the tracker files on a server they had previously compromised. The attack took the form of what is known as a <a href="http://en.wikipedia.org/wiki/DDOS"><abbr class="initialism" title="Distributed Denial of Service">DDOS</abbr> Attack</a>. The attack works by requesting services such as a <a href="http://en.wikipedia.org/wiki/Tcp_handshake#Connection_establishment">TCP handshake</a> several times a second from the machine being attacked. The attacked machine can&#39;t tell the difference between legitimate request and the request that are part of the attack, so it tries to grant all of the request and becomes overwhelmed. Its like running too many programs on a personal computer at once, something (usually the <abbr class="initialism"  title="Operating System">OS</abbr>) crashes.</p>
+          
+          <p>This sounds like the behavior of an angry hacker, most DDOS hackers will take over a computer not for the purpose of compromising that machine, but to have that machine carry out an attack on the hackers behalf against an intended target. They do this so the attack cannot be traced back to to original source. A bot-net consist of several thousand compromised machines waiting for their commander-in-chief to give the strike order on a specific target. When a bot-net attacks, the routers close to the target can also be overwhelmed, thus stopping all traffic to, from and around the target. Without a router directing traffic, nothing gets through. No email, no web pages, no <abbr class="initialism"  title="Internet Proticol">IP</abbr> phone system, NO-THING! Resulting in lost revenue to Revision3</p>
+          
+          <p>But it wasn&#39;t some unscrupulous teenage hacker who initiated the attack, it was a company that protects copyrighted content by placing corrupt or false data in the place of copyrighted material, thus thwarting the copyright infringer&#39;s attempt to infringe. The company, called <a href="http://en.wikipedia.org/wiki/MediaDefender">MediaDefender</a>, is a subsidiary of <a href="http://en.wikipedia.org/wiki/Artistdirect">Artistdirect</a>. The attack was unwarranted, they simply attacked a torrent tracking provider that had blocked them. Artistdirect and MediaDefender reside in California and therefore fall under the jurisdiction of <abbr class="initialism"  title="United States">US</abbr> law. Initiating a DDOS attack is against the law (see <a href="http://en.wikipedia.org/wiki/Economic_Espionage_Act">Economic Espionage Act of 1996 </a>the and <a href="http://en.wikipedia.org/wiki/Computer_Fraud_and_Abuse_Act">Computer Fraud and Abuse Act</a>), so now the <abbr class="initialism"  title="Federal Bureau of Investigation">FBI</abbr> is involved.</p>
         </div>
+        <div class="col-md-3">
+          <h4>sidebar</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum ultricies rhoncus. Sed sodales quam sed dui egestas feugiat. Vestibulum eu mauris suscipit, rhoncus odio at, volutpat mi. Morbi a ex quam. Phasellus ut ultricies sapien, et porttitor metus. Phasellus accumsan lorem iaculis ipsum gravida, quis laoreet libero sagittis. Quisque lacinia massa eget pretium finibus.</p>
+          
+          <img src="towers.jpg" alt="random photo by Jon Sullivan">
+          
+          <p>Vivamus eget euismod risus, vitae condimentum dui. Cras maximus sagittis augue, sed egestas nisl interdum eget. Aliquam quis mollis neque. Mauris hendrerit, magna at tincidunt lobortis, lectus lacus bibendum nisi, laoreet varius ipsum diam et velit. Fusce nec pulvinar lacus, tempor elementum purus. Phasellus ultricies efficitur risus eget tempus. Donec ultricies massa metus, at porta erat feugiat et. In eget nisi sem. Suspendisse sit amet purus ligula. Phasellus congue sit amet mi sed suscipit. Ut purus mauris, semper ut pretium sit amet, facilisis et elit. Donec at nunc ligula. Fusce euismod eget risus consectetur molestie. Aenean vulputate est id venenatis interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+          
+          <p>Donec hendrerit tempus sapien, at interdum justo vehicula a. Morbi fringilla dictum turpis, et fermentum ex commodo id. In rutrum nisl lectus, ac ullamcorper velit porttitor porttitor. Duis laoreet purus id dapibus venenatis. Quisque vel justo nibh. Aliquam in libero nec dui aliquet congue. Maecenas vehicula, ex ac mollis lacinia, turpis enim finibus lorem, in maximus turpis sapien ac neque. Proin in accumsan magna, vitae dignissim nisi. Aenean et auctor mi, eget dictum turpis.</p>
+          
+          <p>Praesent purus ex, vestibulum sed felis sit amet, aliquam scelerisque est. Vivamus tincidunt quam vitae rhoncus lobortis. Sed vel luctus risus, nec maximus arcu. Praesent turpis lacus, pharetra eget elit ut, viverra elementum augue. Curabitur lectus dui, ultrices vitae neque vitae, pulvinar mollis nibh. In dictum consequat odio, et fermentum nibh. Proin tempor, nibh ut eleifend condimentum, nisl elit sodales quam, et vulputate diam velit condimentum mi. Aliquam vel eleifend ante, sed mattis dui. Nam faucibus a risus in semper.</p>
+        </div>
+      </div>
     </div>
     <footer class="footer card-footer alert alert-secondary">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 text-center col-sm-12 col-md-4 text-md-left">
-                    <a href="https://www.facebook.com/autisticgeek">
-                        <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://plus.google.com/u/0/107282707585361316450">
-                        <i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/sblakely1">
-                        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.reddit.com/user/autisticgeek">
-                        <i class="fa fa-reddit-square fa-2x" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://twitter.com/autisticgeek">
-                        <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://github.com/autisticgeek">
-                        <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <div class="col-md-4 col-sm-12 text-center">
-                    <i class="fa fa-copyright" aria-hidden="true"></i>2017 Autisticgeek
-                </div>
-                <div class="text-center col-xs-12 col-sm-12 col-md-4 text-md-right">
-                    3rd content
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 text-center col-sm-12 col-md-6 text-md-left">
+            <a href="https://www.facebook.com/autisticgeek"> <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+            <a href="https://plus.google.com/u/0/107282707585361316450"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a> 
+            <a href="https://www.linkedin.com/in/sblakely1"> <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a> 
+            <a href="https://www.reddit.com/user/autisticgeek"><i class="fa fa-reddit-square fa-2x" aria-hidden="true"></i></a> 
+            <a href="https://twitter.com/autisticgeek"> <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+            <a href="mailto:email+autisticgeek@autisticgeek.com"> <i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i></a>
+          </div>
+          <div class="col-md-6 col-sm-12 text-center text-md-right">
+            <i class="fa fa-copyright" aria-hidden="true"></i>2018 Autisticgeek
+          </div>
         </div>
+      </div>
     </footer>
-</body>
-
+  </body>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </html>
