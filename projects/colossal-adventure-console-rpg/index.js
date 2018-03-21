@@ -12,12 +12,10 @@ function Player(player) {
     this.name = player;
     this.hitpoints = initialHitPoints;
     this.enemysKilled = 0;
-    this.chichen = 0;
+    this.chicken = 0;
     this.turns = 0;
 }
-Player.prototype.enemyNum = function() {
-    return this.enemysKilled + this.chicken;
-};
+
 player = new Player(name);
 
 var Enemy = function () {
@@ -110,9 +108,15 @@ var cobra = function () {
     return console.log(cob);
 }
 
-var fight = function () {
-    console.log(enemys[player.enemysKilled]);
+var fight = function (enemyCurrent) {
+    console.log("fight", enemyCurrent);
 
+    player.enemysKilled++;
+}
+var flee = function (enemyCurrent) {
+    console.log("flee", enemyCurrent);
+
+    player.chicken++;
 }
 
 
@@ -123,7 +127,7 @@ var quit = function () {
 }
 
 var explore = function () {
-    statusBar = `${player.name}\t Life : ${player.hitpoints}\tPOINTS : ${player.enemysKilled}\tTURNS : ${player.turns}`;
+    statusBar = `${player.name}\t Life : ${player.hitpoints}\tPOINTS : ${player.enemysKilled}\tESCAPED : ${player.chicken}\t:TURNS : ${player.turns}`;
     var directionArray = ["north", "east", "south", "west"];
     var direction = directionArray[Math.floor(Math.random() * directionArray.length)]
     player.turns++;
@@ -131,34 +135,43 @@ var explore = function () {
     console.log(statusBar);
     console.log(underline.join(''))
     console.log(`\nYou travel ${direction} for a time…\n`);
-    console.log(player);
-    
+    console.log(enemys)
+
 
 
     if (Math.random() > 0.50) {
 
 
-        switch (enemys[player.enemysKilled].type) {
+        switch (enemys[player.enemysKilled + player.chicken].type) {
             case 'Ancient Dragon':
                 dragon();
-                console.log(`\nYou found an dragon and killed it!\n`);
+                //console.log(`\nYou found an dragon and killed it!\n`);
                 break;
             case 'Panther':
                 panther();
-                console.log(`\nYou found a panther and killed it!\n`);
+                // console.log(`\nYou found a panther and killed it!\n`);
                 break;
             case 'Cobra':
                 cobra();
-                console.log(`\nYou found a cobra and killed it!\n`);
+                // console.log(`\nYou found a cobra and killed it!\n`);
                 break;
         }
-        player.enemysKilled++;
-
+        console.log(enemys[player.enemysKilled + player.chicken])
+        // add battle here
+        var action = false;
+        while (!action) {
+            var action = ask.keyIn("Fight or Run\n\t");
+            if (action === "f" || action === "F") {
+                fight(enemys[player.enemysKilled])
+            } else if (action === "r" || action === "R") {
+                flee(enemys[player.enemysKilled])
+            } else {
+                action = false;
+            }
+        }
     } else {
         console.log(`\nYou find nothing significant.\n`);
     }
-    action = ask.keyIn(`\nWhat do you want to do now?\n\nE̲xplore\nQ̲uit`);
-
 }
 
 console.log('\033c')
@@ -169,12 +182,9 @@ for (var i = 0; i < statusBar.length; i++) {
 }
 console.log(statusBar);
 console.log(underline.join(''))
-var action = ask.keyIn(`What do you want to do?\nE̲xplore\nQ̲uit`);
-while (player.enemysKilled != enemys.length && player.hitpoints >= 1) {
-
-    
-
-
+//var action = ask.keyIn(`What do you want to do?\nE̲xplore\nQ̲uit`);
+while (player.enemysKilled + player.chicken < enemys.length && player.hitpoints > 0) {
+    var action = ask.keyIn(`\nWhat do you want to do now?\n\nE̲xplore\nQ̲uit`);
     switch (action) {
         case "q":
             quit();
@@ -203,10 +213,16 @@ while (player.enemysKilled != enemys.length && player.hitpoints >= 1) {
 
 }
 var outcome;
+console.log(enemys.length);
 if (player.hitpoints < 1) {
     outcome = "\033c" + `\nWat! ${player.name} is now a crispy corpse!\n\n\n\n\n\n\n`
+} else {
+    outcome = `You killed ${player.enemysKilled} and ran from ${player.chicken}\n`
+    if (player.chicken === 0) {
+        outcome += "You killed them all! Someone call the ASPCA!"
+    } else if (player.enemysKilled === 0) {
+        outcome += "You ran away at every turn, are you a 🐔"
+    }
 }
-if (player.enemysKilled === enemys.length) {
-    outcome = "\033c\nYou killed them all!  Someone call the ASPCA!\n\n\n\n\n\n\n"
-}
+
 console.log(outcome);
