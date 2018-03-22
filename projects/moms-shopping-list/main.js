@@ -10,7 +10,7 @@ var addToList = document.getElementById('addToList')
 // build the li and add it as a child.
 var addThisToList =  function(i) {
     var li = document.createElement("li");
-    li.id = i;
+   // li.id = i;
     var t = document.createTextNode(storedList[i]);
     var button = document.createElement("button");
     button.innerText = `🗑`;
@@ -19,7 +19,6 @@ var addThisToList =  function(i) {
         var myParent = e.target.parentNode;
         list.removeChild(myParent);
         storedList.splice(storedList.indexOf(this.name), 1)
-        console.log(storedList)
         localStorage.setItem("list", JSON.stringify(storedList))
     })
 
