@@ -5,52 +5,9 @@
     margin: 0;
 }
 
-html,
-body {
-    padding: 0;
-    margin: 0;
-}
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
 
-body {
-    color: #325050;
-    background: white;
-    font-family: 'Libre Baskerville', sans-serif;
-    font-size: 70%;
-}
-
-a {
-    color: #0d8ba1;
-    transition: all 0.25s ease-out;
-    text-decoration: none;
-}
-
-a:visited {
-    color: #1a5952;
-}
-
-a:hover,
-a:focus {
-    color: #0599c2;
-    text-decoration: underline;
-}
-
-.container {
-    width: 85vw;
-    margin: auto;
-}
-
-#one {
-    height: 230px;
-    padding: 20px 0 70px 0;
-    background-attachment: fixed, fixed, fixed, scroll;
-    background-image: url(contours.png), url(noise.png), url(gridlines.png), url(huntington.jpg);
-    background-position: 0 0, 0 0, -5px -25px, 0 50%;
-    background-repeat: repeat, repeat, repeat, no-repeat;
-    background-size: auto, auto, auto, cover;
-    text-align: center;
-}
-#one #enso {
-    display: inline-block;
-    position: relative;
+body{
+    display:grid;
     
 }
