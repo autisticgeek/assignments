@@ -8,16 +8,18 @@
 
 body {
     display: grid;
+    grid-template-columns: 1fr;
     font-family: "Libre Baskerville", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
     line-height: 32px;
     color: #325050;
+    
 }
 
 .container {
-    width: 85vw;
+    width: 85%;
     margin: auto;
 }
 
@@ -62,10 +64,20 @@ section p {
     text-align: center;
     color: #fff;
 }
-
-.two .summary {
-    /* margin-bot */
+.two .container p a{
+    border-radius: 5px;
+    color: #809b7e;
+    font-family: 'Julius Sans One', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.25s ease-out;
+    padding: 0.5em ;
 }
+.two .container p a:hover, .two .container p a:focus{
+    color: #fff;
+    background: #3d8a9f;
+}
+
 
 .three {
     background-color: rgba(138, 188, 159, 0.5);
@@ -74,7 +86,6 @@ section p {
     background-size: auto, auto, cover;
 }
 
-.four {}
 
 .five {
     background-image: url(contours@2x.png), url(gridlines.png), url(noise.png), url(koi.jpg);
@@ -187,4 +198,72 @@ section p {
     font-style: normal;
     text-decoration: none;
     margin-bottom: 0.25em;
+}
+.nine {
+    display: none;
+    background: #2d6360;
+    color: #fff;
+}
+.ten{
+    display:none;
+    background-color: #e7ede9
+}
+
+@media (min-width:1130px) { 
+    .body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .one {
+        order:1;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .two {
+        order:3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .three {
+        order:5;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .four {
+        order:7;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .five {
+        order:9;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .six{
+        order:10;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .seven {
+        order:4;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .eight {
+        order:6;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .nine {
+        display: unset;
+        order:2;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .ten {
+        display: unset;
+        order:8;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
 }
