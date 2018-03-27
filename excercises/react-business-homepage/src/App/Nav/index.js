@@ -4,9 +4,9 @@ import Brand from "../../images/palmHammock.png";
 function Nav() {
     return (<nav>
         <div class="container">
-            <div class="brand">
+            <div>
                 <a href="." class="brand">
-                    <img src={ Brand } alt="" />
+                    <img src={Brand} alt="" />
                     <div>Many Islands Tours</div>
                 </a>
             </div>
@@ -26,9 +26,11 @@ function Nav() {
                 <li>
                     <a href="somoa.html">Somoa</a>
                 </li>
+
             </ul>
         </div>
-    </nav>);}
+    </nav>);
+}
 
 
 export default Nav
