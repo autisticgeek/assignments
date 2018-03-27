@@ -1,0 +1,234 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    width: 87vw;
+    margin: auto;
+    display: flex;
+    font-family: 'Muli';
+}
+
+nav {
+    background: linear-gradient(darkblue, #56C6F4)
+}
+
+nav .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav .container .brand {
+    display: block;
+    justify-content: center;
+    /* padding:0.5em; */
+}
+
+nav .container ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none outside none;
+    padding-left: 0px;
+    justify-content: center;
+}
+
+nav .container ul li {}
+
+nav .container a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0.5em;
+    text-align: center;
+    margin-top: 0.2em;
+    color: whitesmoke;
+}
+
+nav .container ul li a:hover {
+    background-color: gray;
+    transition-duration: 1.5s
+}
+
+@media (min-width:712px) {
+    nav .container {
+        flex-direction: row;
+        align-items: center
+    }
+    nav .container .brand {
+        flex: 1;
+    }
+    nav .container ul {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex: 4;
+        justify-content: flex-end;
+    }
+    nav .container ul li {
+        margin-left: 1em;
+    }
+    nav .container ul li a {
+        padding: 0.5em;
+        font-size: 1.5rem;
+        transition-duration: 1s;
+    }
+}
+
+header {
+    color: whitesmoke;
+}
+
+#index1 {
+    background-image: url("./images/index1.jpg");
+    height: 500px;
+}
+
+
+/* #index2 {
+    background-image: url("./fiji2.jpg");
+    height: 400px;
+} */
+
+#fiji1 {
+    background-image: url("./images/fiji-para.jpg");
+    height: 500px;
+}
+
+#fiji2 {
+    background-image: url("./images/fiji2.jpg");
+    height: 400px;
+}
+
+#hawaii1 {
+    background-image: url("./images/hawaii1.jpg");
+    height: 500px;
+}
+
+#hawaii2 {
+    background-image: url("./images/hawaii2.jpg");
+    height: 400px;
+}
+
+#tonga1 {
+    background-image: url("./images/tonga1.JPG");
+    height: 500px;
+}
+
+#tonga2 {
+    background-image: url("./images/tonga2.jpg");
+    height: 400px;
+}
+
+#tahiti1 {
+    background-image: url("./images/tahiti1.jpg");
+    height: 500px;
+}
+
+#tahiti2 {
+    background-image: url("./images/tahiti2.jpg");
+    height: 400px;
+}
+
+#somoa1 {
+    background-image: url("./images/somoa1.jpg");
+    height: 500px;
+}
+
+#somoa2 {
+    background-image: url("./images/somoa2.jpg");
+    height: 400px;
+}
+
+.para {
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header .container {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center
+}
+
+header h1 {
+    font-size: 20vw;
+}
+
+main {
+    background-color: #56C6F4;
+}
+
+main .container {
+    display: grid;
+    grid-template-row: auto auto;
+    grid-gap: 2rem;
+    padding-top: 2em;
+}
+
+main .container section {
+    text-align: justify;
+}
+main .container aside{
+    text-align: justify;
+}
+
+main .container p {
+    margin-bottom: 1em;
+}
+
+footer {
+    background: linear-gradient(#56C6F4, #e1d9c7);
+    padding-top: 5em;
+    padding-bottom: 1em;
+}
+
+footer .container {
+    display: grid;
+    grid-gap: 2rem;
+    text-align: center
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0px
+}
+
+@media (min-width: 800px) {
+    nav .container ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+    }
+    nav .container .icon {
+        display: none;
+    }
+    
+}
+
+@media (min-width: 960px) {
+    main .container {
+        display: grid;
+        grid-template-columns: 10fr 2fr;
+        grid-gap: 2rem;
+        padding-top: 2em;
+    }
+    main .container section {
+    }
+    main .container aside{
+    }
+    footer .container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 2rem;
+        text-align: left;
+    }
+}
+.strong{
+    font-weight: bold;
+}
