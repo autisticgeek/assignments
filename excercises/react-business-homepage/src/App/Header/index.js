@@ -1,9 +1,10 @@
 import React from "react";
 
-function Header() {
-    return (<header id="index1" class="para">
-    <div class="container">
-        <h1>Polynesia</h1>
+function Header(props) {
+    console.log(props)
+    return (<header id={props.id} className="para">
+    <div className="container">
+        <h1>{props.content}</h1>
 
     </div>
 </header>)

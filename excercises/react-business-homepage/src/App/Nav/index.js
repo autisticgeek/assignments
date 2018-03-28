@@ -3,16 +3,16 @@ import Brand from "../../images/palmHammock.png";
 
 function Nav() {
     return (<nav>
-        <div class="container">
+        <div className="container">
             <div>
-                <a href="." class="brand">
+                <a href="." className="brand">
                     <img src={Brand} alt="" />
                     <div>Many Islands Tours</div>
                 </a>
             </div>
             <ul>
                 <li>
-                    <a href="./fiji.html">Fiji</a>
+                    <a href=".?figi">Fiji</a>
                 </li>
                 <li>
                     <a href="./hawaii.html">Hawaii</a>
