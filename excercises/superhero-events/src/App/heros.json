@@ -1,0 +1,46 @@
+[{
+        "name": "Superman",
+        "img": "https://orig00.deviantart.net/7843/f/2011/306/f/5/superman_colored_by_dragonofbrainstorms-d4ew4b2.jpg",
+        "catchphrase": "Truth, Justice and the American Way"
+    },
+    {
+        "name": "Batman",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFn-Wy6ORtkLpTCkCPGhRQdVLS_b4VYAq_559XrJG-bKwxi5svuQ",
+        "catchphrase": "To the Bat-____ Robin!"
+    },
+    {
+        "name": "Iron Man",
+        "img": "https://vignette.wikia.nocookie.net/ironman/images/6/6b/Iron_Man_Mark_IV.jpg/revision/latest?cb=20130328013611",
+        "catchphrase": "I'm a futurist."
+    },
+    {
+        "name": "Captain America",
+        "img": "http://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/article_width/public/2016/05/captain-america-figure_0.png?itok=bfjgROwr",
+        "catchphrase": "Avengers Assemble"
+    },
+    {
+        "name": "The Green Lantern",
+        "img": "https://orig00.deviantart.net/1107/f/2012/312/3/f/green_lantern_by_admirawijaya-d5kcsa2.jpg",
+        "catchphrase": "In brightest day... in blackest night, no evil shall escape my sight! Let those who worship evil's might beware my power--Green Lantern's light!"
+    },
+    {
+        "name": "Spiderman",
+        "img": "https://lumiere-a.akamaihd.net/v1/images/usa_spider-man_chi_spider-man_r_d909a17b.png",
+        "catchphrase": "My Spider-Sense is tingling."
+    },
+    {
+        "name": "Wolverine",
+        "img": "http://images2.onionstatic.com/clickhole/1704/6/16x9/800.jpg",
+        "catchphrase": "I'm the best there is at what I do, but what I do best isn't very nice."
+    },
+    {
+        "name": "Hulk",
+        "img": "https://vignette.wikia.nocookie.net/vsbattles/images/d/d1/Open-uri20150608-27674-1jdbpa8_be64ca1b.png/revision/latest?cb=20151022172159",
+        "catchphrase": "You wouldn't like me when I'm angry"
+    },
+    {
+        "name": "Wonder Woman",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfUU3ZVVTylD9D_-ZENetZWhc0Jlvo_N0oqJuIwpyZPDuf64rnxQ",
+        "catchphrase": "Hera, give me strength!"
+    }
+]
