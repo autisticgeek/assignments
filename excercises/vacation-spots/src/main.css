@@ -1,0 +1,21 @@
+.spring, .summer, .fall, .winter {
+    border: thin solid black;
+    text-align: center;
+    border-radius: 1cm;
+    margin:1cm 0;
+    padding: 1em;
+}
+
+.spring {
+    background-color: rgba(0,255,0,0.3);
+}
+.summer {
+    background-color: rgba(234, 226, 131,0.5);
+}
+.fall {
+    background-color: rgba(139, 32, 22,0.8);
+    color: #FFF;
+}
+.winter {
+    background-color: rgba(227, 226, 222, 0.9);
+}
