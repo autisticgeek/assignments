@@ -47,8 +47,11 @@ export default class Form extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" name="storedInput"
-                        value={storedInput} onChange={this.handleChange} /><input type="submit" />
+                    <input
+                    type="text" name="storedInput"
+                    value={storedInput}
+                    placeholder="Name"
+                    onChange={this.handleChange} /><input type="submit" />
                 </form>
                 {/* Display content of input in an H1 */}
                 <h1>{storedInput}</h1>
