@@ -1,5 +1,6 @@
 
 
-function validate(ip) {return ip.split(".").map(octet => octet >=0 && octet<=255 ? true: false).every(element=> element===true)}
+const valIP = (ip) => ip.split(".").map(octet => octet >= 0 && octet <= 255 ? true : false).every(element => element === true)
+console.log(valIP("192.168.3.0"))
 
-console.log(validate("192.168.3.0"))
+//does not account for an address width >< 4 octets
