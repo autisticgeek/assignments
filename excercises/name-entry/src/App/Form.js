@@ -4,9 +4,6 @@ import List from "./List"
 export default class Form extends Component {
     constructor(props) {
         super(props);
-        this.startState={
-            storedInput:""
-            }
         this.state = {
             storedInput: "",
             list: []
