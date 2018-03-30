@@ -40,7 +40,7 @@ export default class Form extends Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" name="storedInput"
-                        value={storedInput} onChange={this.handleChange} />
+                        value={storedInput} onChange={this.handleChange} /><input type="submit" />
                 </form>
                 <h1>{storedInput}</h1>
                 <ul>
