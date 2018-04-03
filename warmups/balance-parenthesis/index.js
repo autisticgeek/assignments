@@ -10,6 +10,7 @@ const chkBal = (str) => {
 }
 
 
+
 console.log(`"()()" // ->`, chkBal("()()"))
 console.log(`"(())" // ->`, chkBal("(())"))
 console.log(`"()))" // ->`, chkBal("()))"))
