@@ -15,7 +15,6 @@ body {
     font-size: 13px;
     line-height: 32px;
     color: #325050;
-    
 }
 
 .container {
@@ -23,15 +22,26 @@ body {
     margin: auto;
 }
 
-h1,
-h3,
- {
+h1,h3{
     text-transform: uppercase;
 }
 
 h1 {
     font-family: "Julius Sans One", sans-serif;
     font-size: 36px;
+    margin-left: -100px;
+}
+
+.one h1::before {
+    display: inline-block;
+    top: 20px;
+    content: "";
+    width: 80px;
+    height: 80px;
+    background: url(./enso.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.6;
 }
 
 h2 {
@@ -54,7 +64,6 @@ section p {
 
 .one {
     height: 230px;
-    padding: 20px 0 70px 0;
     background: #2d6360 50% 0 url(huntington.jpg) no-repeat;
     background-attachment: fixed, fixed, fixed, scroll;
     background-image: url(contours.png), url(noise.png), url(gridlines.png), url(huntington.jpg);
@@ -63,29 +72,84 @@ section p {
     background-size: auto, auto, auto, cover;
     text-align: center;
     color: #fff;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-family: "Julius Sans One", sans-serif;
 }
-.two .container p a{
+
+#brand {
+    width: 100px;
+}
+
+.one-two {
+    background-color: rgba(0, 0, 0, 0.1);
+    bottom: 0;
+}
+
+.one-two a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.one-two ul {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.one-two ul li {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2em;
+    height: 70px;
+    min-width: 70px;
+}
+
+.one-two ul li:nth-child(2) {
+    width: 100%;
+}
+
+.one-two ul li:nth-child(2):hover,
+.one-two ul li:last-child:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.two {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.two .container p a {
     border-radius: 5px;
     color: #809b7e;
     font-family: 'Julius Sans One', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
     transition: all 0.25s ease-out;
-    padding: 0.5em ;
+    padding: 0.5em;
 }
-.two .container p a:hover, .two .container p a:focus{
+
+.two .container p a:hover,
+.two .container p a:focus {
     color: #fff;
     background: #3d8a9f;
 }
-
 
 .three {
     background-color: rgba(138, 188, 159, 0.5);
     background-image: url(contours.png), url(gridlines.png), url(bamboo.png);
     background-repeat: repeat, repeat, no-repeat;
     background-size: auto, auto, cover;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
+.four {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
 
 .five {
     background-image: url(contours@2x.png), url(gridlines.png), url(noise.png), url(koi.jpg);
@@ -96,6 +160,8 @@ section p {
     color: rgba(255, 255, 255, 0.4);
     padding: 3em;
     text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 .five a {
@@ -107,6 +173,8 @@ section p {
 
 .six {
     background-color: #214246;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 .six .container {
@@ -128,6 +196,8 @@ section p {
 
 .seven {
     background: #edf4f0;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 .seven .container ul {
@@ -174,6 +244,8 @@ section p {
 .eight {
     background-color: rgba(138, 188, 159, 0.5);
     background-image: url(bamboo.png);
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 .eight .container ul {
@@ -199,70 +271,96 @@ section p {
     text-decoration: none;
     margin-bottom: 0.25em;
 }
+
 .nine {
     display: none;
     background: #2d6360;
     color: #fff;
 }
-.ten{
-    display:none;
+
+.ten {
+    display: none;
     background-color: #e7ede9
 }
 
-@media (min-width:1130px) { 
+@media (min-width:1130px) {
     .body {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
     .one {
-        order:1;
+        order: 1;
         grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column-end: 4;
+        padding:0;
+        display: grid;
+        grid-template-columns: auto auto;
+        }
+
+    .one-one {
+        border: salmon thin solid;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .one-two {
+        grid-column-start: 2;
+        grid-column-end: 2;
+       
+    }
+    .one h1:before {
+        display: inline-block;
+        position: relative;
+        top: 65px;
+        content: "";
+        width: 125px;
+        height: 125px;
     }
     .two {
-        order:3;
+        order: 3;
         grid-column-start: 1;
         grid-column-end: 3;
     }
     .three {
-        order:5;
+        order: 5;
         grid-column-start: 1;
         grid-column-end: 3;
     }
     .four {
-        order:7;
+        order: 7;
         grid-column-start: 1;
         grid-column-end: 3;
     }
     .five {
-        order:9;
+        order: 9;
         grid-column-start: 1;
         grid-column-end: 4;
     }
-    .six{
-        order:10;
+    .six {
+        order: 10;
         grid-column-start: 1;
         grid-column-end: 4;
     }
     .seven {
-        order:4;
+        order: 4;
         grid-column-start: 3;
         grid-column-end: 4;
     }
     .eight {
-        order:6;
+        order: 6;
         grid-column-start: 3;
         grid-column-end: 4;
     }
-    .nine {
-        display: unset;
-        order:2;
+    .one-one {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .one-two {
         grid-column-start: 3;
         grid-column-end: 4;
     }
     .ten {
         display: unset;
-        order:8;
+        order: 8;
         grid-column-start: 3;
         grid-column-end: 4;
     }
