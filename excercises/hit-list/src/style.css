@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background-image: url('https://etropolskifencing.com/wp-content/uploads/2017/06/backgroundtile.gif')
+}
+#list{
+    width: 70%;
+    margin: auto;
+}
+#list div figure {
+    width: 100%;
+    margin: 0.2cm;
+}
+#list div figure img {
+    width: 100%;
+}
+#list div figure figcaption {
+    margin-top: -1.18cm;
+    background-color: blue;
+    color: white;
+    opacity: 0.6;
+    padding: 0.3cm;
+    text-align: center
+}
+#list figure img {
+    height: 100%;
+}
+
+@media(min-width:960px) {
+    #list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0.75cm;
+    }
+    #list div {
+        grid-column: span 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    #list div figure {
+        width: 100%;
+        margin: 0;
+    }
+    #list div figure img {
+        width: 100%;
+    }
+    #list div figure figcaption {
+        margin-top: -1.18cm;
+        background-color: blue;
+        color: white;
+        opacity: 0.6;
+        padding: 0.3cm;
+        text-align: center
+    }
+    #list figure img {
+        height: 100%;
+    }
+    
+}
