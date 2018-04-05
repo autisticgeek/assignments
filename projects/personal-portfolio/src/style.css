@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    width: 90vw;
+    margin: auto;
+}
+
+body {
+    font-family: 'Dosis', Helvetica, sans-serif
+}
+
+nav {
+    background-image: url('./images/metal.jpg')
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav .container a {
+    text-decoration: none;
+}
+
+header {
+    background-image: url('')
+}
+
+header h1 {
+    letter-spacing: 0cm;
+}
+
+@media(min-width:576px) {
+    header h1 {
+        letter-spacing: 0.2cm;
+    }
+}
+
+@media(min-width:768px) {
+    header h1 {
+        letter-spacing: 0.4cm;
+    }
+}
+
+@media(min-width:922px) {
+    header h1 {
+        letter-spacing: 0.6cm;
+    }
+}
+
+@media(min-width:1500px) {
+    header h1 {
+        letter-spacing: 0.8cm;
+    }
+}
+
+@media(min-width:1875px) {
+    header h1 {
+        letter-spacing: 1cm;
+    }
+}
