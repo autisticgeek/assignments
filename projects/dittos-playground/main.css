@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville');
+/*
+Credit where credit is due. Jen showed me that I could use grid-row to move the divs around, I was trying to do it with order. 
+Jen also discovered that if you set body to display:grid, subgrids don't work 
+    
+THANK YOU JEN
+*/
 *,
 *::before,
 *::after {
@@ -7,8 +13,6 @@
 }
 
 body {
-    /* display: grid;
-    grid-template-columns: 1fr; */
     font-family: "Libre Baskerville", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -21,11 +25,6 @@ body {
     display: grid;
     grid-template-columns: 1fr;
 }
-
-
-
-
-
 .container {
     width: 85%;
     margin: auto;
@@ -39,7 +38,7 @@ h3 {
 h1 {
     font-family: "Julius Sans One", sans-serif;
     font-size: 36px;
-    margin-left: -100px;
+     margin-left: -100px;
 }
 
 .one h1::before {
@@ -82,8 +81,6 @@ section p {
     background-size: auto, auto, auto, cover;
     text-align: center;
     color: #fff;
-    /* grid-column-start: 1;
-    grid-column-end: 4; */
     font-family: "Julius Sans One", sans-serif;
 }
 
@@ -92,12 +89,13 @@ section p {
 }
 
 .one-one {
-    /* grid-column-start: 1; */
+    grid-column-start: 1;
 }
 
 .one-two {
     background-color: rgba(0, 0, 0, 0.1);
-    /* grid-column-start: 1; */
+    position: relative;
+    bottom: -33px;
 }
 
 .one-two a {
@@ -115,10 +113,11 @@ section p {
 
 .one-two ul li {
     background-color: rgba(255, 255, 255, 0.2);
-    padding: 2em;
+    padding: 0.6cm;
 }
-
-.one-two ul li:nth-child(2) {}
+.one-two ul li:nth-child(2) {
+    width:100%
+}
 
 .one-two ul li:nth-child(2):hover,
 .one-two ul li:last-child:hover {
@@ -292,113 +291,54 @@ section p {
     background-color: #e7ede9
 }
 
-.jen {
-    background-color: red;
-    grid-column: 1 / -1;
-    /* width: 100%; */
-    height: 230px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-.jen1 {
-    background-color: darkblue;   
-    grid-column: 1 / span 3;     
-
-}
-.jen2 {
-    background-color: darkorchid;
-    grid-column: 4 / span 1;
-
-}
-
-
-
 
 @media (min-width:1130px) {
-    /* .body {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    } */
 
     .wrapper {
-        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        grid-template-columns: 1fr 1fr 1fr 350px; 
     }
 
-    /* .one {
-        order: 1;
-        grid-column: 1 / -1;
-        grid-column-end: 4;
-        padding: 0;
+    .one{
+        grid-column: span 4;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 350px;
     }
-    .one-one {
-        background-color: darkblue;        
-        grid-column-start: 1;
-        grid-column-end: span 3;
+    .one-one{
+        grid-column: span 3;
     }
-    .one-two {
-        background-color: darkorchid;
-        grid-column-start: 4; 
-        grid-column-end: span 1;
-    } 
-    */
-
-    .one h1:before {
-        display: inline-block;
-        position: relative;
-        top: 65px;
-        content: "";
-        width: 125px;
-        height: 125px;
+    .one-two{
+        bottom:unset;
     }
-    .two {
-        /* order: 3; */
-        grid-column-start: 1;
-        grid-column-end: span 2;
-        grid-row-start: 2;
+    .two{
+        grid-row: 2;
+        grid-column: span 3;
     }
-    .three {
-        /* order: 5; */
-        grid-column-start: 1;
-        grid-row-start: 3;
-        grid-column-end: span 2;
+    .seven{
+        grid-row: 2;
+        grid-column: span 1;
     }
-    .four {
-        /* order: 7; */
-        grid-column-start: 1;
-        grid-row-start: 4;
-        grid-column-end: span 2;
+    .three{
+        grid-row: 3;
+        grid-column: span 3;
     }
-    .five {
-        /* order: 9; */
-        grid-column-start: 1;
-        grid-row-start: 5;
-        grid-column-end: -1;
+    .eight{
+        grid-row: 3;
+        grid-column: span 1;
+    }
+    .four{
+        grid-row: 4;
+        grid-column: span 3;
+    }
+    .ten{
+        grid-row: 4;
+        grid-column: span 1;
+    }
+    .five{
+        grid-row:5;
+        grid-column: span 4
     }
     .six {
-        /* order: 10; */
-        grid-column-start: 1;
-        grid-column-end: span 1;
-        grid-row-start: 6;
-    }
-    .seven {
-        /* order: 4; */
-        grid-column-start: 2;
-        grid-column-end: span 1;
-        grid-row-start: 2;
-    }
-    .eight {
-        /* order: 6; */
-        grid-column-start: 3;
-        grid-column-end: span 1;
-        grid-row-start: 3;
-    }
-    .ten {
-        display: unset;
-        /* order: 8; */
-        grid-column-start: 3;
-        grid-column-end: span 1;
-        grid-row-start: 4;
+        grid-row:6;
+        grid-column: span 4
     }
 }
