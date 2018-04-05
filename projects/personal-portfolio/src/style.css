@@ -5,32 +5,54 @@
 }
 
 .container {
-    width: 90vw;
+    width: 87vw;
     margin: auto;
+}
+.flex-around{
+    display:flex;
+    justify-content: space-around
 }
 
 body {
     color: rgb(180, 180, 180);
     font-family: 'Dosis', Helvetica, sans-serif;
-    background: linear-gradient(to right, rgb(62, 68, 92), rgb(71, 77, 102));
-}
-body a {color: rgb(180, 180, 180);}
-
-nav {
-    
+    background: linear-gradient(to right, rgb(62, 68, 92), rgb(81, 87, 112));
+    position: relative;
 }
 
-nav .container {
-    display: flex;
-    justify-content: space-around;
-}
-
-nav .container a {
+body a {
+    color: rgb(180, 180, 180);
     text-decoration: none;
 }
+p{
+    margin-bottom: 1em;
+}
+
+#particles{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    height: 100vh;
+}
+#root{
+    position: absolute;
+    top:0px;
+    z-index: 0;
+    width:100vw;
+
+}
+
+nav, footer {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0.2cm;
+}
+
 
 header {
-    background-image: url('')
+    background-image: url('');
+    z-index: 0;
+    margin:0.5cm 0 1cm 0;
 }
 
 header h1 {
