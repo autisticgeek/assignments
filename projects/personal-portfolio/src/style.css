@@ -10,11 +10,14 @@
 }
 
 body {
-    font-family: 'Dosis', Helvetica, sans-serif
+    color: rgb(180, 180, 180);
+    font-family: 'Dosis', Helvetica, sans-serif;
+    background: linear-gradient(to right, rgb(62, 68, 92), rgb(71, 77, 102));
 }
+body a {color: rgb(180, 180, 180);}
 
 nav {
-    background-image: url('./images/metal.jpg')
+    
 }
 
 nav .container {
