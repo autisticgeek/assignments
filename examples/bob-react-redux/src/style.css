@@ -1,0 +1,8 @@
+.app {
+    display:flex;
+    justify-content: space-around;
+    /* border:thin solid black; */
+}
+button {
+    padding:1cm;
+}
