@@ -45,7 +45,13 @@ export default class HitList extends React.Component {
         } else if (error !== "") {
             data = error
         } else {
-            data = list.map((personObj, index) => <div key={index} style={personObj.style} onClick={() => this.takenOut(index)}><figure ><img src={personObj.image} alt="" /><figcaption>{personObj.name}</figcaption></figure></div>)
+            data = list.map((personObj, index) =>
+            <div key={index} style={personObj.style} onClick={() => this.takenOut(index)}>
+                <figure>
+                    <img src={personObj.image} alt="" />
+                    <figcaption>{personObj.name}</figcaption>
+                </figure>
+            </div>)
         }
         return (
             <div id="list">
