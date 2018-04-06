@@ -28,7 +28,7 @@ class Form extends Component {
                 }
             }
         })
-        console.log(this.state)
+        //console.log(this.state)
     }
     handleSubmit(e) {
         e.preventDefault();
