@@ -3,8 +3,8 @@ import React from "react";
 
 export default function App() {
     return (
-        <main>
-            <div className="container">
+        <main className="container grid23">
+            <section>
                 <p>Spicy jalapeno bacon ipsum dolor amet chicken tri-tip ham hock tail, venison pork belly sausage meatloaf strip steak sirloin doner. Venison salami corned beef porchetta ground round meatball frankfurter turducken short ribs t-bone cow. Beef pork cupim kielbasa, brisket shoulder capicola tri-tip chicken frankfurter ham sirloin. Bacon pork chop tongue porchetta, swine pastrami tenderloin beef ribs boudin filet mignon drumstick rump fatback corned beef short ribs.</p>
                 <p>Landjaeger ribeye ball tip shank biltong. Kevin cupim buffalo rump jerky flank. Bresaola cupim kevin turkey, sirloin biltong spare ribs pork short ribs salami doner drumstick boudin leberkas shankle. Turkey burgdoggen ribeye jowl hamburger swine, pork chop cow prosciutto spare ribs bresaola jerky. Pork chop kielbasa pig pork loin swine turkey fatback strip steak landjaeger pork belly hamburger beef cupim pancetta.</p>
                 <p>Ribeye turducken cupim meatball kevin biltong tri-tip shank meatloaf landjaeger porchetta jowl. Swine tri-tip short loin, meatball cupim kevin corned beef burgdoggen turkey pork chop meatloaf pancetta. Fatback swine jowl beef ribs jerky. Filet mignon kevin turkey ball tip. Chicken salami bresaola pork loin ball tip pancetta, andouille tail turkey chuck kevin hamburger landjaeger boudin. Rump chicken cupim venison pork belly. Bresaola filet mignon cow short ribs chuck.</p>
@@ -15,7 +15,17 @@ export default function App() {
                 <p>Doner leberkas tongue pork chop beef venison shank burgdoggen alcatra pastrami. Boudin alcatra pork, strip steak picanha cow pork chop pork loin rump ball tip short loin jerky. Porchetta meatball drumstick ground round tail brisket. Landjaeger jerky filet mignon doner flank shankle ribeye bresaola kevin short loin venison frankfurter pork belly beef ribs prosciutto. Frankfurter fatback brisket, meatloaf pig t-bone biltong tenderloin rump filet mignon buffalo. Alcatra cupim short ribs brisket shank.</p>
                 <p>Pancetta short ribs frankfurter t-bone alcatra, pastrami drumstick ham buffalo ribeye venison kevin corned beef. Pastrami cow meatball beef bresaola, kevin short ribs venison salami pig turkey short loin chicken. Fatback porchetta tenderloin, flank turkey drumstick kielbasa ham hock pork belly hamburger doner salami beef ribs sausage. Burgdoggen swine fatback kielbasa, cow venison shoulder ham frankfurter bacon. Short ribs biltong landjaeger ham t-bone picanha tri-tip pig. Prosciutto chicken brisket pork chop pork strip steak, sausage cupim pastrami. Pork alcatra tongue venison jerky, tri-tip rump brisket turducken.</p>
                 <p>Chuck frankfurter porchetta, picanha drumstick rump pork belly. Sirloin salami brisket shank pastrami tenderloin short ribs prosciutto doner ribeye bresaola picanha frankfurter. Pork chop chuck ground round bresaola, ball tip short ribs pork belly bacon leberkas pancetta landjaeger t-bone alcatra. Pork loin ribeye porchetta, fatback shoulder shankle tail ball tip prosciutto. Kevin tail sirloin, short ribs cupim drumstick ribeye fatback shankle biltong andouille brisket chicken chuck.</p>
-            </div>
+            </section>
+            <aside>
+            <div style={{borderBottom:"thin solid rgb(180, 180, 180)"}}>Asheville Citizen-Times &middot; Sun, Dec 13, 2009</div>
+                <a href="https://www.newspapers.com/clip/6581021/asheville_citizentimes_12132009/" style={{ display: "block" }}>
+                    <h3>Students capture top spot in IT competition</h3>
+                    <p>Two Asheville-Buncombe Technical Community College students earned first place in the North Carolina Carolina state final of the 2009 NetRiders Skills Challenge Challenge conducted by Cisco Networking Academy. Brandon Hunnicutt and Matt Blakely beat 42 teams over two rounds of state competition to move on to the North American Theater Finals. In addition to the first-place first-place first-place team, A-B Tech teams beat out competition competition from other colleges and universities in North Carolina to capture the second, third, and sixth place spots in the final state qualifier.</p>
+                </a>
+                <div style={{borderBottom:"thin solid rgb(180, 180, 180)"}}>A-B Tech Websight Nov 18, 2010</div>
+                <blockquote>"In 2009, a team from A-B Tech finished first in state and regional competition then placed 27th in the North American Theater finals, which includes competitors from across the U.S. and Canada."</blockquote>
+                &mdash; <a href="https://www.abtech.edu/news/a-b-tech-students-capture-top-spot-it-skills-competition-0">https://www.abtech.edu/news</a>
+            </aside>
         </main>
     )
 }

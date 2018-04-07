@@ -59,21 +59,30 @@ header h1 {
     letter-spacing: 0cm;
 }
 
+
 @media(min-width:576px) {
     header h1 {
         letter-spacing: 0.2cm;
     }
+    
 }
 
 @media(min-width:768px) {
     header h1 {
         letter-spacing: 0.4cm;
     }
+    
 }
 
 @media(min-width:922px) {
     header h1 {
         letter-spacing: 0.6cm;
+    }
+    .grid23{
+        display: grid;
+        grid-template-columns: 75% 25%;
+        grid-gap: 1cm;
+
     }
 }
 
