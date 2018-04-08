@@ -17,14 +17,22 @@ export default function App() {
                 <p>Chuck frankfurter porchetta, picanha drumstick rump pork belly. Sirloin salami brisket shank pastrami tenderloin short ribs prosciutto doner ribeye bresaola picanha frankfurter. Pork chop chuck ground round bresaola, ball tip short ribs pork belly bacon leberkas pancetta landjaeger t-bone alcatra. Pork loin ribeye porchetta, fatback shoulder shankle tail ball tip prosciutto. Kevin tail sirloin, short ribs cupim drumstick ribeye fatback shankle biltong andouille brisket chicken chuck.</p>
             </section>
             <aside>
-            <div style={{borderBottom:"thin solid rgb(180, 180, 180)"}}>Asheville Citizen-Times &middot; Sun, Dec 13, 2009</div>
+                <div style={{ borderBottom: "thin solid rgb(180, 180, 180)" }}>Asheville Citizen-Times &mdash; 13 Dec 2009</div>
                 <a href="https://www.newspapers.com/clip/6581021/asheville_citizentimes_12132009/" style={{ display: "block" }}>
-                    <h3>Students capture top spot in IT competition</h3>
-                    <p>Two Asheville-Buncombe Technical Community College students earned first place in the North Carolina Carolina state final of the 2009 NetRiders Skills Challenge Challenge conducted by Cisco Networking Academy. Brandon Hunnicutt and Matt Blakely beat 42 teams over two rounds of state competition to move on to the North American Theater Finals. In addition to the first-place first-place first-place team, A-B Tech teams beat out competition competition from other colleges and universities in North Carolina to capture the second, third, and sixth place spots in the final state qualifier.</p>
+                    <blockquote>
+                        <h3>Students capture top spot in IT competition</h3>
+                        <p>Two Asheville-Buncombe Technical Community College students earned first place in the North Carolina state final of the 2009 NetRiders Skills Challenge conducted by Cisco Networking Academy. Brandon Hunnicutt and Matt Blakely beat 42 teams over two rounds of state competition to move on to the North American Theater Finals. In addition to the first-place team, A-B Tech teams beat out competition from other colleges and universities in North Carolina to capture the second, third, and sixth place spots in the final state qualifier.</p>
+                    </blockquote>
                 </a>
-                <div style={{borderBottom:"thin solid rgb(180, 180, 180)"}}>A-B Tech Websight Nov 18, 2010</div>
-                <blockquote>"In 2009, a team from A-B Tech finished first in state and regional competition then placed 27th in the North American Theater finals, which includes competitors from across the U.S. and Canada."</blockquote>
-                &mdash; <a href="https://www.abtech.edu/news/a-b-tech-students-capture-top-spot-it-skills-competition-0">https://www.abtech.edu/news</a>
+                <a href="https://www.abtech.edu/news/a-b-tech-students-capture-top-spot-it-skills-competition-0">
+                    <div style={{ borderBottom: "thin solid rgb(180, 180, 180)" }}>A-B Tech Happenings &mdash; 18 Nov 2010</div>
+                    <p>
+                        <blockquote>
+                            "In 2009, a team from A-B Tech finished first in state and regional competition then placed 27th in the North American Theater finals, which includes competitors from across the U.S. and Canada."</blockquote>
+                    </p>
+                </a>
+                <div style={{ borderBottom: "thin solid rgb(180, 180, 180)" }}><a href="https://www.linkedin.com/in/richard-whitmarsh-70/">Richard Whitmarsh</a> &mdash; 4 Jan 2016</div>
+                <blockquote>"Steven’s character is above reproach. He is very thorough in all he does, Honest in his dealings, and  is always looking to be frugal and yet effective in all he does."</blockquote>
             </aside>
         </main>
     )

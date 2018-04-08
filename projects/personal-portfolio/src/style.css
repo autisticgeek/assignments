@@ -16,8 +16,9 @@
 body {
     color: rgb(180, 180, 180);
     font-family: 'Dosis', Helvetica, sans-serif;
-    background: linear-gradient(to right, rgb(62, 68, 92), rgb(81, 87, 112));
+    background-color: transparent;
     position: relative;
+    z-index: 1;
 }
 
 body a {
@@ -29,19 +30,15 @@ p{
 }
 
 #particles{
-    position: relative;
+    position: fixed;
     left: 0px;
     top: 0px;
     z-index: -1;
     height: 100vh;
-}
-#root{
-    position: absolute;
-    top:0px;
-    z-index: 0;
     width:100vw;
-
+    background: linear-gradient(to right, rgb(62, 68, 92), rgb(81, 87, 112));
 }
+
 
 nav, footer {
     background-color: rgba(0, 0, 0, 0.1);
@@ -62,21 +59,21 @@ header h1 {
 
 @media(min-width:576px) {
     header h1 {
-        letter-spacing: 0.2cm;
+        letter-spacing: 0.1cm;
     }
     
 }
 
 @media(min-width:768px) {
     header h1 {
-        letter-spacing: 0.4cm;
+        letter-spacing: 0.2cm;
     }
     
 }
 
 @media(min-width:922px) {
     header h1 {
-        letter-spacing: 0.6cm;
+        letter-spacing: 0.3cm;
     }
     .grid23{
         display: grid;
@@ -88,12 +85,12 @@ header h1 {
 
 @media(min-width:1500px) {
     header h1 {
-        letter-spacing: 0.8cm;
+        letter-spacing: 0.4cm;
     }
 }
 
 @media(min-width:1875px) {
     header h1 {
-        letter-spacing: 1cm;
+        letter-spacing: 0.5cm;
     }
 }
