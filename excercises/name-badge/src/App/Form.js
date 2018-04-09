@@ -37,6 +37,7 @@ class Form extends React.Component {
         this.setState(newState);
         this.props.addBadge(newState);
         this.setState(this.initialState);
+        event.target.reset()
         
     }
     render() {
