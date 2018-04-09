@@ -1,11 +1,40 @@
+body{
+    background-color: white;
+}
 #root, form, .badge{
     display:grid;
     grid-template-columns: 1fr;
 }
-form, .badge{
+form{
     border:solid thin black;
     border-radius: 1cm;
     padding:1cm;
+    margin:1cm;
+}
+.badge{
+    border:solid thin black;
+    border-radius: 1cm;
+    margin:1cm;
+    overflow: hidden;
+}
+.badge div{
+    margin-left:1cm;
+    margin-right:1cm;
+}
+
+.badge .head, .badge .about{
+    grid-column: span 2;
+}
+.badge .head {
+    text-align: center;
+    margin: 0;
+    color:white;
+    padding:0.75cm;
+    }
+.badge .about {
+    border:solid thin black;
+    padding:0.5cm;
+    margin: 1cm
 }
 @media(min-width:960px){
     form, .badge{

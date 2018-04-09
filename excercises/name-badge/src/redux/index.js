@@ -7,10 +7,9 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case "ADD_BADGE":
-            this.setState = {
-                data: [...state.data, action.badge]
-            }
-            break;
+        return {
+            data: [...state.data, action.badge]
+        }
         default:
             return state;
     }
@@ -18,7 +17,7 @@ const reducer = (state = initialState, action) => {
 
 export const addBadge = badge => {
     return {
-        type: "ADD_CAT",
+        type: "ADD_BADGE",
         badge
     }
 }
