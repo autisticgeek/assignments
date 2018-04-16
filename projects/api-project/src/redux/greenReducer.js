@@ -2,19 +2,19 @@ import axios from "axios";
 
 
 const initialState = {
-    trains: [],
+    trains:[],
     loading: true,
     errMsg: ""
 }
 
 
-const frontrunnerReducer = (state = initialState, action) => {
+const greenReducer = (state = initialState, action) => {
     console.log("action", action)
     switch (action.type) {
-        case "GET_FRONTRUNNER":
+        case "GET_GREEN":
             return {
                 // ...state,
-                trains:action.frontrunner,
+                trains:action.green,
                 loading: false
             }
         case "ERR_MSG":
@@ -29,14 +29,14 @@ const frontrunnerReducer = (state = initialState, action) => {
 }
 
 
-export const getFrontrunner = (utaRoute) => {
+export const getGreen = (utaRoute) => {
 const apiUrl = `http://cors.vschool.io/?url=http://api.rideuta.com/SIRI/SIRI.svc/VehicleMonitor/ByRoute?route=${utaRoute}&onwardcalls=true&usertoken=USEKQBT0XC3`;
     return dispatch => {
         axios.get(apiUrl)
             .then(response => {
                 dispatch({
-                    type: "GET_FRONTRUNNER",
-                    frontrunner: response.data.Siri.VehicleMonitoringDelivery[0].VehicleActivity[0].MonitoredVehicleJourney
+                    type: "GET_GREEN",
+                    green: response.data.Siri.VehicleMonitoringDelivery[0].VehicleActivity[0].MonitoredVehicleJourney
 
                 })
             })
@@ -50,4 +50,4 @@ const apiUrl = `http://cors.vschool.io/?url=http://api.rideuta.com/SIRI/SIRI.svc
 }
 //getTrain();
 
-export default frontrunnerReducer;
+export default greenReducer;

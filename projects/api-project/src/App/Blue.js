@@ -2,26 +2,26 @@ import React, { Component } from "react";
 import GoogleMapReact from 'google-map-react'
 
 import { connect } from "react-redux";
-import { getFrontrunner } from "../redux/frontrunnerReducer";
+import { getBlue } from "../redux/blueReducer";
 
 
 
 class Train extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state={
-            lat:0,
-            lng:0
+        this.state = {
+            lat: 0,
+            lng: 0
         }
-        this.onGeolocateError= this.onGeolocateError.bind(this);
-        this.onGeolocateSuccess= this.onGeolocateSuccess.bind(this);
+        this.onGeolocateError = this.onGeolocateError.bind(this);
+        this.onGeolocateSuccess = this.onGeolocateSuccess.bind(this);
         this.geolocate = this.geolocate.bind(this)
     }
     componentDidMount() {
-        this.props.getFrontrunner(750);
-        setInterval(()=>{this.props.getFrontrunner(750)}, 15000)
-       
-        
+        this.props.getBlue(701);
+        setInterval(() => { this.props.getBlue(701) }, 15000)
+
+
     }
     onGeolocateSuccess(coordinates) {
         const { latitude, longitude } = coordinates.coords;
@@ -31,7 +31,7 @@ class Train extends Component {
                 lat: latitude,
                 lng: longitude
             };
-          });
+        });
     }
 
     onGeolocateError(error) {
@@ -47,9 +47,9 @@ class Train extends Component {
     }
     geolocate() {
         if (window.navigator && window.navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(this.onGeolocateSuccess, this.onGeolocateError);
+            navigator.geolocation.getCurrentPosition(this.onGeolocateSuccess, this.onGeolocateError);
         }
-      }
+    }
 
 
     render() {
@@ -65,10 +65,9 @@ class Train extends Component {
                 return temp
             })
         }
-        
-       
 
-        return <div>
+
+        return <div className="blue">
             <div className='google-map'>
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: "AIzaSyAp_gcAL9g64umPJUNU10vjP3Y-MHbmmQo" }}
@@ -90,8 +89,8 @@ class Train extends Component {
 }
 
 const mapStateToProps = state => {
-    return state.frontrunner;
+    return state.blue;
 }
 
-export default connect(mapStateToProps, { getFrontrunner })(Train);
+export default connect(mapStateToProps, { getBlue })(Train);
 
