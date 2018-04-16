@@ -30,7 +30,7 @@ const frontrunnerReducer = (state = initialState, action) => {
 
 
 export const getFrontrunner = (utaRoute) => {
-const apiUrl = `http://cors.vschool.io/?url=http://api.rideuta.com/SIRI/SIRI.svc/VehicleMonitor/ByRoute?route=${utaRoute}&onwardcalls=true&usertoken=USEKQBT0XC3`;
+const apiUrl = `https://vschool-cors.herokuapp.com/?url=http://api.rideuta.com/SIRI/SIRI.svc/VehicleMonitor/ByRoute?route=${utaRoute}&onwardcalls=true&usertoken=USEKQBT0XC3`;
     return dispatch => {
         axios.get(apiUrl)
             .then(response => {
