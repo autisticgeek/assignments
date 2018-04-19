@@ -4,7 +4,7 @@ const bp = require("body-parser")
 
 const app = express();
 const PORT = 8080;
-let index = [{
+let database = [{
     color: "black",
     species: "test"
 }, {
@@ -20,7 +20,7 @@ app.route("/data")
     .get((req, res) => {
         const { query } = req
         console.log("query", query)
-        const queriedData = index.filter(obj => {
+        const queriedData = database.filter(obj => {
             for (let key in query) {
                 if (query[key] === "") {
                     continue;
@@ -38,7 +38,7 @@ app.route("/data")
         console.log(req.body);
         const newData = req.body
         newData._id = uuid()
-        index.push(newData)
+        database.push(newData)
         res.status(201).send(newData)
 
     })
@@ -47,20 +47,20 @@ app.route("/data/:id")
     .get((req, res) => {
         console.log("id", req.params)
         const { id } = req.params
-        const foundData = index.filter(data => data._id === id)[0]
+        const foundData = database.filter(data => data._id === id)[0]
         res.status(200).send(foundData);
     })
     .delete((req, res) => {
         console.log("delete", req.params)
         const { id } = req.params
-        index = index.filter(data => data._id !== id)
+        database = database.filter(data => data._id !== id)
         res.status(204).send();
     })
     .put((req, res) => {
         console.log("put", req.params);
         const { id } = req.params;
         let editedData = req.body;
-        index = index.map(obj => obj._id === id ? editedData = { ...obj, ...editedData } : obj);
+        database = database.map(obj => obj._id === id ? editedData = { ...obj, ...editedData } : obj);
         res.status(200).send(editedData)
 
     })

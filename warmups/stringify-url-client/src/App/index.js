@@ -18,7 +18,7 @@ export default class App extends Component {
             species: e.target.species.value
         }
         console.log("query", query)
-        let serverQuery=`color=${query.color}&species=${query.species}`
+        let serverQuery=`color=black&species=${query.species}`
         console.log(`/data?${serverQuery}`)
         axios.get(`/data?${serverQuery}`).then(responce => {
             this.setState({
