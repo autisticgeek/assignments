@@ -13,3 +13,7 @@ warmups/anik/oldboard-bg3.jpg
 projects/personal-portfolio/IMG_0857.jpg
 projects/API Project/keys/ProPublica Data Store.pdf
 projects/API Project/keys/Utah Transit Authority.pdf
+**data/db/journal/
+**data/db/diagnostic.data/
+data/db/journal/WiredTigerLog.0000000006
+data/db/diagnostic.data/metrics.interim
