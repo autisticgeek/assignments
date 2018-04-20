@@ -14,7 +14,7 @@
 }
 
 body {
-    color: rgb(180, 180, 180);
+    color:whitesmoke;
     font-family: 'Dosis', Helvetica, sans-serif;
     background-color: transparent;
     position: relative;
@@ -22,7 +22,7 @@ body {
 }
 
 body a {
-    color: rgb(180, 180, 180);
+    color: whitesmoke;
     text-decoration: none;
 }
 p{
