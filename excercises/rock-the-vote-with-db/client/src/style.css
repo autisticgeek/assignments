@@ -1,0 +1,15 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+}
+article{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    width:90vw;
+    margin: auto;
+}
+.voteBox{
+    display:grid;
+    grid-template-columns:1fr;
+    text-align:center;
+}
