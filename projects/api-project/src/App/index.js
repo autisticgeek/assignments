@@ -8,6 +8,7 @@ import Frontrunner from "./Frontrunner";
 import Blue from "./Blue";
 import Red from "./Red";
 import Green from "./Green";
+import All from "./All";
 
 function App(props) {
     return (
@@ -23,6 +24,7 @@ function App(props) {
                 <Route path="/blue" component={Blue} />
                 <Route path="/red" component={Red} />
                 <Route path="/green" component={Green} />
+                <Route path="/all" component={All} />
 
             </Switch>
         </div>
