@@ -19,8 +19,8 @@ bountyRoute.route("/")
             if (err) {
                 res.status(200).send(err)
             } else {
-                newBounty(addedBounty, {path:factionID}, populatedBounty)
-                res.status(201).send(populatedBounty)
+               // newBounty(addedBounty, {path:factionID}, populatedBounty)
+                res.status(201).send(addedBounty)
             }
         })
     })
