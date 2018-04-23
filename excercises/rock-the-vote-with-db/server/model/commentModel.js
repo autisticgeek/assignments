@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const CommentSchema = new Schema({
     comment: { required: true, type: String },
-    PostID: {
+    postID: {
         type:mongoose.Schema.Types.ObjectId,
         ref:"post"
     }

@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
-import {fetchArticles} from '../redux';
+import { connect } from 'react-redux';
+import { fetchArticles, downvoteArticle, upvoteArticle } from '../redux';
 import ArticleMin from './articleMin';
 
 
 class allArticles extends Component {
-    componentDidMount(){
+    componentDidMount() {
         this.props.fetchArticles();
     }
     render() {
         console.log(this.props);
-        const {data}= this.props;
-        const articles= data.map((obj)=><ArticleMin key={obj._id} {...obj} />)
-        
+        let { data } = this.props;
+        data.sort((a, b) => {
+            console.log("sort A",a.upvote);
+            console.log("sort B",b.upvote);
+            
+            return b.upvote - a.upvote})
+        const articles = data.map((obj) => <ArticleMin key={obj._id} {...obj} downvoteArticle={this.props.downvoteArticle} upvoteArticle={this.props.upvoteArticle}/>)
+
         return (
             <div>
-              {articles} 
+                {articles}
             </div>
         )
     }
 }
 
-export default connect(state=>state, {fetchArticles})(allArticles);
+export default connect(state => state, { fetchArticles, downvoteArticle, upvoteArticle })(allArticles);

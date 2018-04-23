@@ -7,9 +7,15 @@ article{
     grid-template-columns: 50px 1fr;
     width:90vw;
     margin: auto;
+    margin-bottom: 1cm;
 }
 .voteBox{
     display:grid;
     grid-template-columns:1fr;
     text-align:center;
+    max-height:1px;
+}
+.comment{
+    width:90vw;
+    margin: auto;
 }
