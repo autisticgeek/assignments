@@ -5,7 +5,7 @@ const initState= {
     loading:true
 }
 const reducer = (state = initState, action) => {
-    switch (accd tion.type) {
+    switch (action.type) {
         case "GET_PLANETS":
         return {loading:false}
         default:
@@ -20,6 +20,6 @@ const getPlanets= ()=>{
 const store = createStore(combineReducers(reducer));
 store.subscribe(() => {
     console.log(store.getState());
-})
+})}
 
 export default store;
