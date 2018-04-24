@@ -5,6 +5,7 @@ const PostModel = require("../model/postModel")
 postRoute.route("/")
     .get((req, res) => {
         PostModel.find(req.query, (err, foundposts) => {
+            
             err ? res.status(200).send(err) : res.status(200).send(foundposts)
         })
     }

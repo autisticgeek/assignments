@@ -55,6 +55,20 @@ export const upvoteArticle = (articleID) => {
         })
     }
 }
+export const newArticlePost = (obj) => {
+    console.log("redux", obj);
+    
+    return dispatch => {
+        axios.post(`/post`, obj)
+        .then(response => {
+            console.log("test",response.data)
+            // dispatch({
+            //     type: "jhVOTE",
+            //     data: response.data
+            // })
+        })
+    }
+}
 
 
 const store = createStore(reducer, applyMiddleware(thunk));

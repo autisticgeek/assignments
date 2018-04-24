@@ -49,7 +49,7 @@ class articleFull extends Component {
                 })
             })
     }
-
+ 
 
     componentDidMount() {
         this.fetchOneArticle(this.props.match.params.id)
@@ -68,13 +68,13 @@ class articleFull extends Component {
             <div>
                 <article>
                     <div className="voteBox" >
-                        <i className="far fa-arrow-alt-circle-up fa-2x" onClick={() => this.upVoteArticle(_id)}></i>
+                        <i className="far fa-arrow-alt-circle-up fa-2x" onClick={() => this.upVoteArticle(_id)} title={upvote}></i>
                         <h3>{votes}</h3>
-                        <i className="far fa-arrow-alt-circle-down fa-2x" onClick={() => this.downVoteArticle(_id)}></i>
+                        <i className="far fa-arrow-alt-circle-down fa-2x" onClick={() => this.downVoteArticle(_id)} title={downvote}></i>
                     </div>
                     <div>
                         <h2>{title}</h2>
-                        <div>{description}</div>
+                        <div dangerouslySetInnerHTML={{__html: description}}></div>
                     </div>
                 </article>
                 {comments}

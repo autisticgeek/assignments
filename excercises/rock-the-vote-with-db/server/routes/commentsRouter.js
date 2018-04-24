@@ -5,7 +5,9 @@ const CommentModel = require("../model/commentModel")
 
 commentRoute.route("/")
     .get((req, res) => {
-        CommentModel.find(req.query, (err, foundcomments) => {
+        CommentModel.find(req.query)
+        .populate("postID")
+        .exec((err, foundcomments) => {
             err ? res.status(200).send(err) : res.status(200).send(foundcomments)
         })
     }
@@ -17,6 +19,7 @@ commentRoute.route("/")
 commentRoute.route("/:id")
 .get((req, res) => {
     CommentModel.findOne({ _id: req.params.id })
+        .populate("postID")
         .exec((err, foundComment) => {
             if (err) {
                 res.status(200).send(err)
@@ -41,6 +44,7 @@ commentRoute.route("/:id")
 })
 .put((req, res) => {
     CommentModel.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
+    .populate("postID")
     .exec(((err, updateComment) => {
             if (err) {
                 res.status(200).send(err)

@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "ajv": "^6.4.0",
     "axios": "^0.18.0",
     "react": "^16.3.2",
+    "react-ckeditor-component": "^1.0.7",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",

@@ -11,11 +11,7 @@ class allArticles extends Component {
     render() {
         console.log(this.props);
         let { data } = this.props;
-        data.sort((a, b) => {
-            console.log("sort A",a.upvote);
-            console.log("sort B",b.upvote);
-            
-            return b.upvote - a.upvote})
+        data.sort((a, b) => {return b.upvote - a.upvote})
         const articles = data.map((obj) => <ArticleMin key={obj._id} {...obj} downvoteArticle={this.props.downvoteArticle} upvoteArticle={this.props.upvoteArticle}/>)
 
         return (

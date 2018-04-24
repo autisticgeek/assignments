@@ -7,7 +7,8 @@ article{
     grid-template-columns: 50px 1fr;
     width:90vw;
     margin: auto;
-    margin-bottom: 1cm;
+    margin-bottom: 2cm;
+
 }
 .voteBox{
     display:grid;
@@ -18,4 +19,7 @@ article{
 .comment{
     width:90vw;
     margin: auto;
+}
+header{
+    border-bottom: thick solid black;
 }
