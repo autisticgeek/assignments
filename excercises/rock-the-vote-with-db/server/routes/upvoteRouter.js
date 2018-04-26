@@ -8,7 +8,7 @@ upvoteRouter.route("/:id")
     PostModel.findOneAndUpdate({ _id: req.params.id }, update, { new: true })
     .exec(((err, updatePost) => {
             if (err) {
-                res.status(200).send(err)
+                res.status(500).send(err)
             } else if (updatePost) {
                 res.status(200).send(updatePost)
             } else {

@@ -49,7 +49,8 @@ class newArticle extends Component {
 
         return (
             <form onSubmit={this.handleSubmit}>
-                <input type="text" placeholder="Title" onChange={this.handleChange} required /><input type="submit" id="submit" />
+                <input type="text" placeholder="Title" onChange={this.handleChange} required />
+                <input type="submit" id="submit" />
                 <CKEditor
                     content={this.state.description}
                     events={{

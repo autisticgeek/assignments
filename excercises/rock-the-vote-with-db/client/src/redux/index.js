@@ -6,7 +6,10 @@ const reducer = (state = { data: [], comments: [] }, action) => {
     console.log("action", action)
     switch (action.type) {
         case "FETCH_ARTICLES":
-            return { data: action.data };
+            return {
+                ...state,
+                data: action.data
+            };
         case "VOTE":
             return{
                 ...state,
@@ -62,10 +65,7 @@ export const newArticlePost = (obj) => {
         axios.post(`/post`, obj)
         .then(response => {
             console.log("test",response.data)
-            // dispatch({
-            //     type: "jhVOTE",
-            //     data: response.data
-            // })
+         
         })
     }
 }

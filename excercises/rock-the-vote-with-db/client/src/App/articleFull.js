@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux';
 import axios from 'axios';
+import {Link} from "react-router-dom";
 
-class articleFull extends Component {
+class ArticleFull extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,6 +12,7 @@ class articleFull extends Component {
         this.fetchOneArticle = this.fetchOneArticle.bind(this);
         this.upVoteArticle = this.upVoteArticle.bind(this);
         this.downVoteArticle = this.downVoteArticle.bind(this);
+        this.deleteArticle = this.deleteArticle.bind(this);
     }
     fetchOneArticle = articleID => {
         axios.get(`/post/${articleID}`)
@@ -49,7 +50,14 @@ class articleFull extends Component {
                 })
             })
     }
- 
+    deleteArticle = (articleID) => {
+        let areYouSure = window.confirm("Are you sure?");
+        if (areYouSure) {
+            axios.delete(`/post/${articleID}`)
+                .then(window.location.assign('/'))
+        }
+    }
+
 
     componentDidMount() {
         this.fetchOneArticle(this.props.match.params.id)
@@ -71,10 +79,13 @@ class articleFull extends Component {
                         <i className="far fa-arrow-alt-circle-up fa-2x" onClick={() => this.upVoteArticle(_id)} title={upvote}></i>
                         <h3>{votes}</h3>
                         <i className="far fa-arrow-alt-circle-down fa-2x" onClick={() => this.downVoteArticle(_id)} title={downvote}></i>
+                        <i className="far fa-trash-alt fa-2x" onClick={() => this.deleteArticle(_id)} title="Trash this article"></i>
+                        <Link to={`/edit/${_id}`}><i className="fas fa-edit fa-2x"></i></Link>
+
                     </div>
                     <div>
                         <h2>{title}</h2>
-                        <div dangerouslySetInnerHTML={{__html: description}}></div>
+                        <div dangerouslySetInnerHTML={{ __html: description }}></div>
                     </div>
                 </article>
                 {comments}
@@ -82,4 +93,4 @@ class articleFull extends Component {
         )
     }
 }
-export default connect(null, )(articleFull)
+export default ArticleFull
