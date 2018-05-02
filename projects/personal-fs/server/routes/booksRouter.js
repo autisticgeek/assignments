@@ -4,9 +4,10 @@ const BooksModel = require("../models/booksModel")
 
 booksRoute.route("/")
     .get((req, res) => {
-        console.log("bookGet");
+        console.log(req.query);
+        
         BooksModel.find(req.query)
-            .populate("publisher_id")
+           // .populate("publisher_id")
             .populate("author_id")
             .exec((err, foundBook) => {
                 if (err) {
