@@ -13,7 +13,7 @@ class ShowBooks extends Component {
         books = this.props.books.map(obj => <div key={obj._id} className="booksView"><Link to={`/book/${obj._id}`}>{obj.title}</Link> by {obj.authorFName} {obj.authorLName}</div>)
 
         return (
-            <div>
+            <div style={{padding:"3vw"}}>
                {books}
             </div>
         )

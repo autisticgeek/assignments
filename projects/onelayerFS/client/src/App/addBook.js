@@ -41,15 +41,16 @@ class NewBook extends Component {
 
 
         return (
-            <form onSubmit={this.handleSubmit}>
+            <div style={{padding:"3vw"}}>
+            <form onSubmit={this.handleSubmit} style={{display:"grid", gridTemplateColumns:"1fr"}}>
                 <input type="text" name="title" value={this.state.title} placeholder="Book Title" onChange={this.handleChange} />
                 <textarea value={this.state.description} name="description" onChange={this.handleChange}></textarea>
                 <input type="text" name="authorFName" value={this.state.authorFName} placeholder="Author First Name" onChange={this.handleChange}/>
                 <input type="text" name="authorLName" value={this.state.authorLName} placeholder="Author Last Name" onChange={this.handleChange}/>
                 <input type="text" name="publisher" value={this.state.publisher} placeholder="Publisher" onChange={this.handleChange}/>
                 <input type="text" name="isbn" value={this.state.isbn} placeholder="ISBN 10" onChange={this.handleChange}/>
-                <input type="submit" />
-            </form>
+                <input type="submit" id="submit" />
+            </form></div>
         )
     }
 }

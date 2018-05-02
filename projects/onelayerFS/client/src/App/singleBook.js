@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { deleteBook } from '../redux'
+import { Link } from "react-router-dom"
 
 
 class SingleBook extends Component {
@@ -18,12 +19,16 @@ class SingleBook extends Component {
         if (this.props.books) {
             book = this.props.books.filter(obj => this.props.match.params.id === obj._id)
             console.log(book[0]);
-            const { title, _id, authorFName, authorLName } = book[0]
+            const { title, _id, authorFName, authorLName, description, isbn, publisher, year} = book[0]
             return (
-                <div>
+                <div className="singleBook">
                     <h1>{title}</h1>
-                    <h2>{authorFName} {authorLName}</h2>
-                    <button onClick={() => this.delete(_id)}>Delete</button>
+                    <h2>by {authorFName} {authorLName}</h2>
+                    <h4>{year} {publisher}</h4>
+                    <h4>{isbn}</h4>
+                    <p>{description}</p>
+                    <button onClick={() => this.delete(_id)} className="btn">Delete</button>
+                    <Link to={`/edit/${_id}`} className="btn">Edit</Link>
                 </div>
             )
         }

@@ -5,6 +5,7 @@ import { getBooks } from "../redux"
 import addBook from "./addBook"
 import showBooks from "./showBooks"
 import singleBook from "./singleBook"
+import editBook from "./editBook"
 
 
 class App extends Component {
@@ -27,6 +28,7 @@ class App extends Component {
                     <Route exact path="/" component={showBooks} />
                     <Route path="/add" component={addBook} />
                     <Route path="/book/:id" component={singleBook} />
+                    <Route path="/edit/:id" component={editBook} />
 
                 </Switch>
             </div>

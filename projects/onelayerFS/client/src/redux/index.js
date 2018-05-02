@@ -10,6 +10,11 @@ const reducer = (state = {}, action) => {
                 ...state,
                 books: action.data
             };
+        case "EDIT_BOOKS":
+            return state.books.map(obj => {
+                if (obj._id === action.data._id) return action.data
+                return obj
+            })
         default:
             return state;
     }
@@ -36,7 +41,20 @@ export const newBookFunction = (book) => {
             })
     }
 }
-export const deleteBook = id =>{
+export const editBookFunction = (book) => {
+    return dispatch => {
+        console.log("me to")
+        axios.put(`/books/${book._id}`, book)
+            .then(response => {
+                console.log(response.data);
+                dispatch({
+                    type: "EDIT_BOOKS",
+                    data: response.data
+                })
+            })
+    }
+}
+export const deleteBook = id => {
     return dispatch => {
         axios.delete(`/books/${id}`)
             .then(response => {
@@ -45,8 +63,8 @@ export const deleteBook = id =>{
                     data: response.data
                 })
             }
-            
-        )
+
+            )
     }
 }
 
