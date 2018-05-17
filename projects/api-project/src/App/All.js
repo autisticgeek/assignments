@@ -2,14 +2,10 @@ import React, { Component } from "react";
 import GoogleMapReact from 'google-map-react'
 
 import { connect } from "react-redux";
-import { getBlue } from "../redux/blueReducer";
-import { getFrontrunner } from "../redux/frontrunnerReducer";
-import { getRed } from "../redux/redReducer";
-import { getGreen } from "../redux/greenReducer";
 
 
 
-class Train extends Component {
+class Map extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,17 +17,7 @@ class Train extends Component {
         this.geolocate = this.geolocate.bind(this)
     }
     componentDidMount() {
-        this.props.getBlue(701);
-        this.props.getFrontrunner(750);
-        this.props.getGreen(704);
-        this.props.getRed(703);
-        setInterval(() => {this.props.getBlue(701)}, 30000)
-        setInterval(() => {this.props.getFrontrunner(750)}, 30000)
-        setInterval(() => {this.props.getGreen(704)}, 30000)
-        setInterval(() => {this.props.getRed(703)}, 30000)
-
-
-    }
+  }
     onGeolocateSuccess(coordinates) {
         const { latitude, longitude } = coordinates.coords;
         console.log('Found coordinates: ', latitude, longitude);
@@ -47,7 +33,7 @@ class Train extends Component {
         console.warn(error.code, error.message);
 
         if (error.code === 1) {
-            console.log("they said no")
+            console.log("they said no or not over https ")
         } else if (error.code === 2) {
             console.log("position unavailable")
         } else if (error.code === 3) {
@@ -63,43 +49,7 @@ class Train extends Component {
 
     render() {
         console.log("props",this.props);
-        const blueTrains = this.props.blue.trains.map((vehicleObj, index) => {
-            let temp = null;
-            if (vehicleObj.DirectionRef[0] !== "") {
-                const direction = vehicleObj.DirectionRef[0]
-                temp = <div key={index} lat={vehicleObj.VehicleLocation["0"].Latitude["0"]} lng={vehicleObj.VehicleLocation["0"].Longitude["0"]} text={direction} title={direction}><i class="fas fa-train fa-2x blue"></i></div>;
-
-            }
-            return temp
-        })
         
-        const frontrunnerTrains = this.props.frontrunner.trains.map((vehicleObj, index) => {
-            let temp = null;
-            if (vehicleObj.DirectionRef[0] !== "") {
-                const direction = vehicleObj.DirectionRef[0]
-                temp = <div key={index} lat={vehicleObj.VehicleLocation["0"].Latitude["0"]} lng={vehicleObj.VehicleLocation["0"].Longitude["0"]} text={direction} title={direction}><i class="fas fa-train fa-2x fr"></i></div>;
-
-            }
-            return temp
-        })
-        const redTrains = this.props.red.trains.map((vehicleObj, index) => {
-            let temp = null;
-            if (vehicleObj.DirectionRef[0] !== "") {
-                const direction = vehicleObj.DirectionRef[0]
-                temp = <div key={index} lat={vehicleObj.VehicleLocation["0"].Latitude["0"]} lng={vehicleObj.VehicleLocation["0"].Longitude["0"]} text={direction} title={direction}><i class="fas fa-train fa-2x red"></i></div>;
-
-            }
-            return temp
-        })
-        const greenTrains = this.props.green.trains.map((vehicleObj, index) => {
-            let temp = null;
-            if (vehicleObj.DirectionRef[0] !== "") {
-                const direction = vehicleObj.DirectionRef[0]
-                temp = <div key={index} lat={vehicleObj.VehicleLocation["0"].Latitude["0"]} lng={vehicleObj.VehicleLocation["0"].Longitude["0"]} text={direction} title={direction}><i class="fas fa-train fa-2x green"></i></div>;
-
-            }
-            return temp
-        })
 
         return <div>
             <div className='google-map'>
@@ -107,10 +57,6 @@ class Train extends Component {
                     bootstrapURLKeys={{ key: "AIzaSyAp_gcAL9g64umPJUNU10vjP3Y-MHbmmQo" }}
                     center={{ lat: 40.7, lng: -111.80 }}
                     zoom={9}>
-                    {blueTrains}
-                    {frontrunnerTrains}
-                    {redTrains}
-                    {greenTrains}
                     <div lat={this.state.lat} lng={this.state.lng}><i class="fas fa-map-marker fa-2x"></i></div>
 
 
@@ -125,9 +71,6 @@ class Train extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return state;
-}
 
-export default connect(mapStateToProps, {getBlue, getFrontrunner, getGreen, getRed})(Train);
+export default connect(state => state, {})(Map);
 
