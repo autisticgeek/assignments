@@ -6,6 +6,7 @@ const CommentModel = require("../model/commentModel")
 commentRoute.route("/")
     .get((req, res) => {
         CommentModel.find(req.query)
+        .sort({createdAt: 'descending'})
         .populate("postID")
         .exec((err, foundcomments) => {
             err ? res.status(200).send(err) : res.status(200).send(foundcomments)
@@ -13,6 +14,7 @@ commentRoute.route("/")
     }
     )
     .post((req, res) => {
+        console.log(req.body)
         const newComment = new CommentModel(req.body)
         newComment.save((err, addedComment) => err ? res.status(200).send(err) : res.status(201).send(addedComment))
     })
